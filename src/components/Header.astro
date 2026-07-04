@@ -1,0 +1,284 @@
+---
+// Static replica of the dwatson.pk Magento header.
+// All category links point to the live store; only "Explore" stays on this subdomain.
+const nav = [
+  {
+    label: 'Medicines',
+    href: 'https://dwatson.pk/medicines.html',
+    children: [
+      { label: 'Baby & Child Medication', href: 'https://dwatson.pk/medicines/baby-child-medicines.html' },
+      { label: 'Brain & Neurological', href: 'https://dwatson.pk/medicines/mental-neurological.html' },
+      { label: 'Chest & Respiratory', href: 'https://dwatson.pk/medicines/chest-respiratory.html' },
+      { label: 'Stomach & Digestion', href: 'https://dwatson.pk/medicines/gastrointestinal.html' },
+      { label: 'Heart & Blood', href: 'https://dwatson.pk/medicines/heart-blood.html' },
+      { label: 'Metabolic & Hormonal Health', href: 'https://dwatson.pk/medicines/renal-prostate-liver-endocrine.html' },
+      { label: 'Muscles & Joints', href: 'https://dwatson.pk/medicines/muscular-joints.html' },
+      { label: 'Infections & Antibiotics', href: 'https://dwatson.pk/medicines/infections-antibiotics.html' },
+      { label: 'Pain & Fever Relief', href: 'https://dwatson.pk/medicines/pain-fever-relief.html' },
+      { label: 'Skin, Hair & Nails', href: 'https://dwatson.pk/medicines/skin-hair-nails.html' },
+      { label: 'Eye & Ear Care', href: 'https://dwatson.pk/medicines/ent-eye.html' },
+      { label: 'Cancer and Autoimmune', href: 'https://dwatson.pk/medicines/cancer-and-autoimmune.html' },
+      { label: 'Anti-Allergy', href: 'https://dwatson.pk/medicines/antiallergic.html' },
+      { label: 'Reproductive & Sexual Health', href: 'https://dwatson.pk/medicines/reproductive-sexual-health.html' },
+      { label: 'Oral & Dental Care', href: 'https://dwatson.pk/medicines/oral-dental-care.html' },
+    ],
+  },
+  {
+    label: 'Health Supplements',
+    href: 'https://dwatson.pk/health-supplements.html',
+    children: [
+      { label: 'Health Concerns', href: 'https://dwatson.pk/health-supplements/health-concern.html' },
+      { label: 'By Ingredients', href: 'https://dwatson.pk/health-supplements/by-ingredients.html' },
+      { label: "Women's Health", href: 'https://dwatson.pk/health-supplements/women-s-health.html' },
+      { label: "Men's Health", href: 'https://dwatson.pk/health-supplements/men-s-health.html' },
+      { label: 'Child & Baby Supplements', href: 'https://dwatson.pk/health-supplements/child-baby.html' },
+      { label: 'Vitamins A-Z', href: 'https://dwatson.pk/health-supplements/vitamins-a-z.html' },
+    ],
+  },
+  {
+    label: 'Skin Care',
+    href: 'https://dwatson.pk/skin-care.html',
+    children: [
+      { label: 'Cleansing Products', href: 'https://dwatson.pk/skin-care/cleansing-products.html' },
+      { label: 'Sun Protectors', href: 'https://dwatson.pk/skin-care/sun-protectors.html' },
+      { label: 'Serums & Treatments', href: 'https://dwatson.pk/skin-care/serums-and-treatments.html' },
+      { label: 'Moisturizers', href: 'https://dwatson.pk/skin-care/lotions.html' },
+      { label: 'Masks', href: 'https://dwatson.pk/skin-care/masks.html' },
+      { label: 'Lip Care', href: 'https://dwatson.pk/skin-care/lip-care.html' },
+    ],
+  },
+  {
+    label: 'Personal Care',
+    href: 'https://dwatson.pk/personal-care.html',
+    children: [
+      { label: 'Bath & Body', href: 'https://dwatson.pk/personal-care/bath-body.html' },
+      { label: 'Oral Care', href: 'https://dwatson.pk/personal-care/oral-care.html' },
+      { label: 'Hair Care', href: 'https://dwatson.pk/personal-care/hair-care.html' },
+      { label: 'Feminine Hygiene', href: 'https://dwatson.pk/personal-care/feminine-care.html' },
+      { label: 'Personal Grooming', href: 'https://dwatson.pk/personal-care/personal-grooming.html' },
+      { label: 'Deodorants', href: 'https://dwatson.pk/personal-care/body-spray.html' },
+      { label: 'Hair Removal & Shaving', href: 'https://dwatson.pk/personal-care/hair-removal-shaving.html' },
+    ],
+  },
+  {
+    label: 'Fragrances',
+    href: 'https://dwatson.pk/fragrances.html',
+    children: [
+      { label: "Men's Perfumes", href: 'https://dwatson.pk/fragrances/men-s-perfume.html' },
+      { label: "Women's Perfumes", href: 'https://dwatson.pk/fragrances/women-s-perfume.html' },
+      { label: 'Perfume Gift Sets', href: 'https://dwatson.pk/fragrances/perfume-gift-set.html' },
+      { label: 'Ittar', href: 'https://dwatson.pk/fragrances/ittar.html' },
+    ],
+  },
+  {
+    label: 'Sexual Wellness',
+    href: 'https://dwatson.pk/sexual-wellness.html',
+    children: [
+      { label: 'Sexual Supplements', href: 'https://dwatson.pk/sexual-wellness/sexual-supplements.html' },
+      { label: 'Lubricants', href: 'https://dwatson.pk/sexual-wellness/lubricants.html' },
+      { label: 'Condoms', href: 'https://dwatson.pk/sexual-wellness/condoms.html' },
+    ],
+  },
+  {
+    label: 'Baby & Child',
+    href: 'https://dwatson.pk/baby-and-mother-care.html',
+    children: [
+      { label: 'Baby Foods', href: 'https://dwatson.pk/baby-and-mother-care/baby-food-milk.html' },
+      { label: 'Baby Diapers & Wipes', href: 'https://dwatson.pk/baby-and-mother-care/baby-diapers-wipes.html' },
+      { label: 'Baby Feeding', href: 'https://dwatson.pk/baby-and-mother-care/baby-essentials.html' },
+      { label: 'Baby Care', href: 'https://dwatson.pk/baby-and-mother-care/baby-bath-body.html' },
+      { label: 'Baby Electronics', href: 'https://dwatson.pk/baby-and-mother-care/baby-electronics.html' },
+      { label: 'Baby Formula Milk', href: 'https://dwatson.pk/baby-and-mother-care/lactose-free-formula.html' },
+    ],
+  },
+  {
+    label: 'Healthcare Devices',
+    href: 'https://dwatson.pk/medical-devices.html',
+    children: [
+      { label: 'Respiratory & Wellness Devices', href: 'https://dwatson.pk/medical-devices/respiratory-wellness-devices.html' },
+      { label: 'Monitoring Devices', href: 'https://dwatson.pk/medical-devices/monitoring-devices.html' },
+      { label: 'Other Medical Tools', href: 'https://dwatson.pk/medical-devices/other-medical-tools.html' },
+    ],
+  },
+  {
+    label: 'Surgical & Elderly Care',
+    href: 'https://dwatson.pk/surgicals.html',
+    children: [
+      { label: 'Colostomy Essentials', href: 'https://dwatson.pk/surgicals/colostomy-essentials.html' },
+      { label: 'Support & Braces', href: 'https://dwatson.pk/surgicals/support-braces.html' },
+      { label: 'Adult Care', href: 'https://dwatson.pk/surgicals/adult-care.html' },
+      { label: 'Mobility Support', href: 'https://dwatson.pk/surgicals/mobility-support.html' },
+      { label: 'Surgical Supplies', href: 'https://dwatson.pk/surgicals/surgical-supplies.html' },
+    ],
+  },
+  {
+    label: 'Herbal Medicines',
+    href: 'https://dwatson.pk/herbal-medicines.html',
+    children: [
+      { label: 'Cholesterol', href: 'https://dwatson.pk/herbal-medicines/cholesterol-blood-pressure.html' },
+      { label: 'Cough & Cold', href: 'https://dwatson.pk/herbal-medicines/cough-cold.html' },
+      { label: 'Digestive Care', href: 'https://dwatson.pk/herbal-medicines/digestive-care.html' },
+      { label: 'Natural Supplements', href: 'https://dwatson.pk/herbal-medicines/natural-supplements.html' },
+      { label: 'Heart Care', href: 'https://dwatson.pk/herbal-medicines/heart-care.html' },
+      { label: 'Liver Care', href: 'https://dwatson.pk/herbal-medicines/liver-care.html' },
+      { label: 'Male Disorders', href: 'https://dwatson.pk/herbal-medicines/male-disorders.html' },
+      { label: 'Female Disorders', href: 'https://dwatson.pk/herbal-medicines/female-disorders.html' },
+      { label: 'Musculoskeletal Care', href: 'https://dwatson.pk/herbal-medicines/musculo-skeletal-care.html' },
+      { label: 'Respiratory Care', href: 'https://dwatson.pk/herbal-medicines/respiratory-care.html' },
+      { label: 'Skin Care', href: 'https://dwatson.pk/herbal-medicines/skin-care.html' },
+      { label: 'Weight Loss', href: 'https://dwatson.pk/herbal-medicines/weight-loss.html' },
+      { label: 'Blood Pressure', href: 'https://dwatson.pk/herbal-medicines/blood-pressure.html' },
+    ],
+  },
+  { label: 'Homeopathic Medicines', href: 'https://dwatson.pk/homeopathic-medicines.html', children: [] },
+  { label: 'Hot Deals', href: 'https://dwatson.pk/hot-deals.html', children: [] },
+];
+---
+
+<header class="dw-header">
+  <div class="dw-topbar">
+    <div class="dw-container dw-topbar-inner">
+      <a class="dw-logo" href="/" aria-label="D.Watson Explore — home">
+        <img src="https://dwatson.pk/static/frontend/DWatson/customtheme/en_US/images/logo.svg" alt="D.Watson" width="170" height="46" />
+        <span class="dw-logo-sub">Explore</span>
+      </a>
+      <div class="dw-topbar-actions">
+        <a href="https://dwatson.pk/customer/account/login/" class="dw-signin">Sign In</a>
+        <a href="https://dwatson.pk/checkout/cart/" class="dw-cart" aria-label="My Cart">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 7h12l1 13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1L6 7Z" />
+            <path d="M9 10V6a3 3 0 0 1 6 0v4" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="dw-nav" aria-label="Store categories">
+    <div class="dw-container">
+      <ul class="dw-nav-list">
+        {nav.map((item) => (
+          <li class={`dw-nav-item ${item.children.length ? 'has-children' : ''}`}>
+            <a href={item.href}>{item.label}</a>
+            {item.children.length > 0 && (
+              <ul class="dw-submenu">
+                {item.children.map((child) => (
+                  <li><a href={child.href}>{child.label}</a></li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .dw-topbar {
+    background: var(--dw-red);
+    color: #fff;
+  }
+  .dw-topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
+  }
+  .dw-logo {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    text-decoration: none;
+  }
+  .dw-logo img {
+    display: block;
+    height: auto;
+  }
+  .dw-logo-sub {
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.92;
+  }
+  .dw-topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+  }
+  .dw-signin {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .dw-signin:hover { text-decoration: underline; }
+  .dw-cart { color: #fff; display: inline-flex; }
+
+  .dw-nav {
+    background: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  }
+  .dw-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .dw-nav-item { position: relative; }
+  .dw-nav-item > a {
+    display: block;
+    padding: 0.85rem 0.55rem;
+    color: var(--dw-blue);
+    font-weight: 700;
+    font-size: 0.88rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .dw-nav-item > a:hover { color: var(--dw-red); }
+
+  .dw-submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 50;
+    min-width: 240px;
+    margin: 0;
+    padding: 0.4rem 0;
+    list-style: none;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  .dw-nav-item.has-children:hover .dw-submenu,
+  .dw-nav-item.has-children:focus-within .dw-submenu {
+    display: block;
+  }
+  .dw-submenu a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #333;
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+  .dw-submenu a:hover {
+    background: #f6f6f6;
+    color: var(--dw-red);
+  }
+
+  @media (max-width: 900px) {
+    .dw-nav-list {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+    .dw-submenu { display: none !important; }
+  }
+</style>

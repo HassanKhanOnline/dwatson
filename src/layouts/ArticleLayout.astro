@@ -1,0 +1,184 @@
+---
+import Base from './Base.astro';
+
+interface Product {
+  name: string;
+  url: string;
+  price: number; // numeric PKR for schema
+}
+interface Faq {
+  q: string;
+  a: string;
+}
+interface Props {
+  title: string;
+  headline: string;
+  description: string;
+  datePublished: string;
+  dateModified: string;
+  products: Product[];
+  faqs: Faq[];
+}
+
+const { title, headline, description, datePublished, dateModified, products, faqs } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    datePublished,
+    dateModified,
+    mainEntityOfPage: canonical,
+    author: {
+      '@type': 'Organization',
+      name: 'D.Watson Chemist & Gift Center',
+      url: 'https://dwatson.pk/',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'D.Watson Chemist & Gift Center',
+      url: 'https://dwatson.pk/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://dwatson.pk/static/frontend/DWatson/customtheme/en_US/images/logo.svg',
+      },
+    },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: headline,
+    itemListOrder: 'https://schema.org/ItemListOrderAscending',
+    numberOfItems: products.length,
+    itemListElement: products.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: p.name,
+      url: p.url,
+      item: {
+        '@type': 'Product',
+        name: p.name,
+        url: p.url,
+        offers: {
+          '@type': 'Offer',
+          price: p.price,
+          priceCurrency: 'PKR',
+          availability: 'https://schema.org/InStock',
+          seller: { '@type': 'Organization', name: 'D.Watson', url: 'https://dwatson.pk/' },
+        },
+      },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Explore', item: 'https://explore.dwatson.pk/' },
+      { '@type': 'ListItem', position: 2, name: headline, item: canonical },
+    ],
+  },
+];
+
+const fmt = (d: string) =>
+  new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<Base title={title} description={description} schema={schema}>
+  <article class="dw-container article">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="/">Explore</a> <span>›</span> <span>{headline}</span>
+    </nav>
+    <h1>{headline}</h1>
+    <p class="byline">
+      By the D.Watson Pharmacy Team · Updated {fmt(dateModified)} ·
+      Every product below is stocked and shipped nationwide by
+      <a href="https://dwatson.pk/">dwatson.pk</a>.
+    </p>
+
+    <slot />
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((f) => (
+        <details>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </section>
+
+    <p class="disclaimer">
+      <strong>Disclaimer:</strong> This guide is for general information only and is not medical
+      advice. Prices were checked on {fmt(dateModified)} and may change. Consult a pharmacist or
+      physician before starting any new product, especially if you are pregnant, nursing, taking
+      medication, or managing a chronic condition.
+    </p>
+  </article>
+</Base>
+
+<style>
+  .article {
+    max-width: 800px;
+    padding-top: 2rem;
+  }
+  .crumbs {
+    font-size: 0.85rem;
+    color: var(--dw-muted);
+    margin-bottom: 1rem;
+  }
+  .crumbs span { margin: 0 0.25rem; }
+  h1 { font-size: 2rem; margin: 0 0 0.5rem; color: var(--dw-text); }
+  .byline {
+    font-size: 0.9rem;
+    color: var(--dw-muted);
+    border-bottom: 2px solid var(--dw-red);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .article :global(h2) {
+    font-size: 1.45rem;
+    margin-top: 2.5rem;
+    color: var(--dw-text);
+  }
+  .article :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin: 1.25rem 0;
+  }
+  .article :global(th),
+  .article :global(td) {
+    border: 1px solid var(--dw-border);
+    padding: 0.55rem 0.7rem;
+    text-align: left;
+  }
+  .article :global(th) { background: var(--dw-bg-soft); }
+  .faq details {
+    border: 1px solid var(--dw-border);
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.6rem;
+    background: var(--dw-bg-soft);
+  }
+  .faq summary { font-weight: 700; cursor: pointer; }
+  .disclaimer {
+    margin-top: 2.5rem;
+    font-size: 0.82rem;
+    color: var(--dw-muted);
+    background: var(--dw-bg-soft);
+    border-left: 3px solid var(--dw-red);
+    padding: 0.9rem 1.1rem;
+  }
+</style>

@@ -1,0 +1,136 @@
+---
+import Base from '../layouts/Base.astro';
+
+const articles = [
+  {
+    slug: '/best-sunscreens-in-pakistan/',
+    category: 'Skin Care',
+    title: '10 Best Sunscreens in Pakistan (2026)',
+    description: 'From Rs. 750 budget SPF 60s to Korean SPF 50+ favourites — pharmacist-reviewed picks for the Pakistani sun.',
+    date: 'July 4, 2026',
+  },
+  {
+    slug: '/best-blood-pressure-monitors-in-pakistan/',
+    category: 'Healthcare Devices',
+    title: '10 Best Blood Pressure Monitors in Pakistan (2026)',
+    description: 'Digital vs aneroid vs mercury — which BP monitor to buy for home use, elderly parents, or a clinic.',
+    date: 'July 4, 2026',
+  },
+  {
+    slug: '/best-vitamin-c-supplements-in-pakistan/',
+    category: 'Health Supplements',
+    title: '10 Best Vitamin C Supplements in Pakistan (2026)',
+    description: 'Tablets, sugar-free sachets, and vitamin C + zinc combos compared on dose and price per day.',
+    date: 'July 4, 2026',
+  },
+];
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Explore by D.Watson',
+    url: 'https://explore.dwatson.pk/',
+    description:
+      'Buying guides and product round-ups from D.Watson Chemist & Gift Center, Pakistan.',
+    publisher: {
+      '@type': 'Organization',
+      name: 'D.Watson Chemist & Gift Center',
+      url: 'https://dwatson.pk/',
+    },
+  },
+];
+---
+
+<Base
+  title="Explore by D.Watson — Buying Guides & Best-Of Lists for Health, Beauty & Wellness in Pakistan"
+  description="Pharmacist-reviewed buying guides from D.Watson: the best sunscreens, supplements, healthcare devices, and personal care products available in Pakistan, with live prices and stock."
+  schema={schema}
+>
+  <section class="hero">
+    <div class="dw-container">
+      <h1>Explore by D.Watson</h1>
+      <p>
+        Honest, pharmacist-reviewed buying guides for health, beauty, and wellness in
+        Pakistan. Every product we recommend is in stock at
+        <a href="https://dwatson.pk/">dwatson.pk</a> with nationwide delivery.
+      </p>
+    </div>
+  </section>
+
+  <section class="dw-container">
+    <h2 class="section-title">Latest Guides</h2>
+    <div class="grid">
+      {articles.map((a) => (
+        <a class="card" href={a.slug}>
+          <span class="cat">{a.category}</span>
+          <h3>{a.title}</h3>
+          <p>{a.description}</p>
+          <span class="meta">Updated {a.date} · D.Watson Pharmacy Team</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="dw-container about">
+    <h2 class="section-title">Why trust these guides?</h2>
+    <p>
+      D.Watson Chemist &amp; Gift Center has served Islamabad and Rawalpindi since 1980 and
+      is one of Pakistan's largest pharmacy retailers. Our guides are written with input from
+      our in-store pharmacy team, compare only products we actually stock and dispense daily,
+      and show real shelf prices — so what you read here is what you can order today on
+      <a href="https://dwatson.pk/">dwatson.pk</a>.
+    </p>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, var(--dw-red), #7c0000);
+    color: #fff;
+    padding: 3.5rem 0;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.4rem; margin: 0 0 0.75rem; }
+  .hero p { max-width: 620px; margin: 0 auto; font-size: 1.05rem; opacity: 0.95; }
+  .hero a { color: #ffd9d9; }
+
+  .section-title {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    border-left: 4px solid var(--dw-red);
+    padding-left: 0.75rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  .card {
+    display: block;
+    border: 1px solid var(--dw-border);
+    border-radius: 8px;
+    padding: 1.4rem 1.5rem;
+    text-decoration: none;
+    color: var(--dw-text);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+    background: #fff;
+  }
+  .card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  .cat {
+    display: inline-block;
+    color: var(--dw-red);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  .card h3 { margin: 0 0 0.5rem; font-size: 1.15rem; color: var(--dw-blue); }
+  .card p { margin: 0 0 0.75rem; font-size: 0.92rem; color: var(--dw-muted); }
+  .meta { font-size: 0.78rem; color: #999; }
+  .about p { max-width: 760px; }
+</style>

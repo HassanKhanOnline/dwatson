@@ -1,0 +1,78 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="dw-footer">
+  <div class="dw-container dw-footer-grid">
+    <div>
+      <h3>Explore by D.Watson</h3>
+      <p>
+        Buying guides and product round-ups from D.Watson Chemist &amp; Gift Center —
+        one of Pakistan's most trusted pharmacy retailers since 1980, serving
+        Islamabad and Rawalpindi with nationwide delivery via
+        <a href="https://dwatson.pk/">dwatson.pk</a>.
+      </p>
+    </div>
+    <div>
+      <h3>Shop</h3>
+      <ul>
+        <li><a href="https://dwatson.pk/medicines.html">Medicines</a></li>
+        <li><a href="https://dwatson.pk/health-supplements.html">Health Supplements</a></li>
+        <li><a href="https://dwatson.pk/skin-care.html">Skin Care</a></li>
+        <li><a href="https://dwatson.pk/medical-devices.html">Healthcare Devices</a></li>
+        <li><a href="https://dwatson.pk/hot-deals.html">Hot Deals</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Guides</h3>
+      <ul>
+        <li><a href="/best-sunscreens-in-pakistan/">Best Sunscreens in Pakistan</a></li>
+        <li><a href="/best-blood-pressure-monitors-in-pakistan/">Best Blood Pressure Monitors</a></li>
+        <li><a href="/best-vitamin-c-supplements-in-pakistan/">Best Vitamin C Supplements</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="dw-footer-bottom">
+    <div class="dw-container">
+      <p>
+        © {year} D.Watson Chemist &amp; Gift Center. Content on explore.dwatson.pk is for
+        general information only and is not a substitute for professional medical advice.
+        Always consult a qualified pharmacist or physician.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .dw-footer {
+    margin-top: 4rem;
+    background: #222;
+    color: #ccc;
+    font-size: 0.9rem;
+  }
+  .dw-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.4fr;
+    gap: 2.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .dw-footer h3 {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0 0 0.8rem;
+  }
+  .dw-footer ul { list-style: none; margin: 0; padding: 0; }
+  .dw-footer li { margin-bottom: 0.45rem; }
+  .dw-footer a { color: #ccc; }
+  .dw-footer a:hover { color: #fff; }
+  .dw-footer-bottom {
+    border-top: 1px solid #3a3a3a;
+    padding: 1rem 0;
+    font-size: 0.8rem;
+    color: #999;
+  }
+  @media (max-width: 800px) {
+    .dw-footer-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  }
+</style>

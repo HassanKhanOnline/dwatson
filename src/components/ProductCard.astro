@@ -1,0 +1,62 @@
+---
+interface Props {
+  rank: number;
+  name: string;
+  price: string;
+  url: string;
+  badge?: string;
+}
+
+const { rank, name, price, url, badge } = Astro.props;
+---
+
+<section class="product-card" id={`pick-${rank}`}>
+  <div class="product-head">
+    <h3>{rank}. {name}</h3>
+    {badge && <span class="badge">{badge}</span>}
+  </div>
+  <p class="price">Price at D.Watson: <strong>{price}</strong></p>
+  <div class="blurb"><slot /></div>
+  <a class="buy-btn" href={url} rel="noopener">View at dwatson.pk →</a>
+</section>
+
+<style>
+  .product-card {
+    border: 1px solid var(--dw-border);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.75rem 0;
+    background: #fff;
+  }
+  .product-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .product-head h3 { margin: 0; font-size: 1.2rem; color: var(--dw-text); }
+  .badge {
+    background: var(--dw-red);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+  }
+  .price { margin: 0.5rem 0 0.25rem; color: var(--dw-muted); font-size: 0.95rem; }
+  .blurb :global(p) { margin: 0.5rem 0; }
+  .buy-btn {
+    display: inline-block;
+    margin-top: 0.75rem;
+    background: var(--dw-red);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  .buy-btn:hover { background: #8f0000; }
+</style>

@@ -1,0 +1,158 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+
+const products = [
+  { name: 'Anua Heart Leaf Silky Moist Sun Cream SPF50+ PA+++', url: 'https://dwatson.pk/anua-heart-leaf-silky-moist-sun-cream-spf50-pa.html', price: 7000, display: 'Rs. 7,000', badge: 'Best Overall' },
+  { name: 'Anua Airy Sun Cream SPF50 50ml', url: 'https://dwatson.pk/anua-airy-sun-cream-spf50-50ml.html', price: 8000, display: 'Rs. 8,000', badge: 'Best for Oily Skin' },
+  { name: 'Aveeno Sunscreen Ultra Calming Daily Moisturizer 68ml', url: 'https://dwatson.pk/aveeno-sunscreen-68ml-ultra-calming-daily-moisturizer.html', price: 3300, display: 'Rs. 3,300', badge: 'Best for Sensitive Skin' },
+  { name: 'Anua Heartleaf Panthenol Silky Moisture Mild Screen SPF50', url: 'https://dwatson.pk/anua-heartleaf-panthenol-silky-moisture-mild-screen-spf50.html', price: 6500, display: 'Rs. 6,500' },
+  { name: 'Asolite Sun Screen SPF70 50gm', url: 'https://dwatson.pk/asolite-sun-screen-spf70-50gm.html', price: 2295, display: 'Rs. 2,295', badge: 'Highest SPF' },
+  { name: 'Ammore Care Sun Cream SPF75 120ml', url: 'https://dwatson.pk/ammore-care-sun-cream-spf75-120ml-sun-protect.html', price: 1550, display: 'Rs. 1,550', badge: 'Best Value' },
+  { name: 'Arabella Sun Shield Tinted SPF60 50ml', url: 'https://dwatson.pk/arabella-sun-shield-tinted-spf60-50ml.html', price: 1500, display: 'Rs. 1,500', badge: 'Best Tinted' },
+  { name: 'Ammore Care Sunblock SPF50 100ml', url: 'https://dwatson.pk/ammore-care-sunblock-spf50-100ml.html', price: 1400, display: 'Rs. 1,400' },
+  { name: 'Anexa 60 Vitamin C Sunscreen Lotion', url: 'https://dwatson.pk/anexa-60-vitamin-c-sunscreen-lotion.html', price: 995, display: 'Rs. 995' },
+  { name: 'Arabella Sun Shield 60 SPF 50ml', url: 'https://dwatson.pk/arabella-sun-shield-60spf-50ml.html', price: 750, display: 'Rs. 750', badge: 'Best Budget' },
+];
+
+const faqs = [
+  { q: 'Which SPF is best for the Pakistani climate?', a: 'For daily use in Pakistan, dermatologists generally recommend SPF 50 or higher with broad-spectrum (UVA + UVB) protection. UV index levels in cities like Islamabad, Lahore, and Karachi frequently reach very high in summer, so SPF 50+ with a PA+++ rating offers safer coverage than SPF 30.' },
+  { q: 'What is the best affordable sunscreen in Pakistan?', a: 'Arabella Sun Shield 60 SPF (around Rs. 750 at D.Watson) is one of the most affordable SPF 60 sunscreens available in Pakistan, while Ammore Care SPF75 offers 120ml — the largest size on this list — for about Rs. 1,550.' },
+  { q: 'Do I need sunscreen indoors or in winter?', a: 'Yes. UVA rays penetrate glass and cause pigmentation and photo-aging year-round. If you sit near windows or drive during the day, a daily broad-spectrum sunscreen is still recommended, even in Pakistani winters.' },
+  { q: 'How much sunscreen should I apply?', a: 'The standard guidance is about two finger-lengths (roughly 1.25ml) for the face and neck, reapplied every 2–3 hours during sun exposure. Most people apply less than half the amount needed to achieve the labelled SPF.' },
+  { q: 'Are Korean sunscreens like Anua worth the higher price?', a: 'Korean formulas such as Anua Heart Leaf tend to use newer UV filters that feel lighter, leave no white cast, and layer well under makeup. If you wear sunscreen daily, the cosmetic elegance often means better compliance — the best sunscreen is the one you actually reapply.' },
+];
+---
+
+<ArticleLayout
+  title="10 Best Sunscreens in Pakistan (2026) — Tested Picks from D.Watson | Explore"
+  headline="10 Best Sunscreens in Pakistan (2026): Pharmacist-Reviewed Picks"
+  description="The best sunscreens available in Pakistan in 2026, from budget SPF 60 options under Rs. 800 to Korean SPF 50+ favourites — all in stock at D.Watson with nationwide delivery."
+  datePublished="2026-07-04"
+  dateModified="2026-07-04"
+  products={products}
+  faqs={faqs}
+>
+  <p>
+    With UV index levels in Pakistan regularly hitting <strong>"very high" (8–11)</strong> from
+    April through September, daily sunscreen is the single most effective step against
+    pigmentation, melasma, and premature aging. Our pharmacy team compared the sunscreens
+    stocked at <a href="https://dwatson.pk/skin-care/sun-protectors.html">D.Watson's sun
+    protection range</a> on SPF rating, texture, white cast, and price per ml. Here are the
+    10 we recommend in 2026.
+  </p>
+
+  <h2>Quick comparison</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Sunscreen</th><th>SPF</th><th>Best for</th><th>Price</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Anua Heart Leaf Silky Moist</td><td>50+ PA+++</td><td>Best overall</td><td>Rs. 7,000</td></tr>
+      <tr><td>2</td><td>Anua Airy Sun Cream</td><td>50</td><td>Oily / combination skin</td><td>Rs. 8,000</td></tr>
+      <tr><td>3</td><td>Aveeno Ultra Calming Moisturizer</td><td>Broad spectrum</td><td>Sensitive skin</td><td>Rs. 3,300</td></tr>
+      <tr><td>4</td><td>Anua Heartleaf Panthenol Mild Screen</td><td>50</td><td>Dry / barrier-damaged skin</td><td>Rs. 6,500</td></tr>
+      <tr><td>5</td><td>Asolite Sun Screen</td><td>70</td><td>Highest SPF</td><td>Rs. 2,295</td></tr>
+      <tr><td>6</td><td>Ammore Care Sun Cream</td><td>75</td><td>Best value (120ml)</td><td>Rs. 1,550</td></tr>
+      <tr><td>7</td><td>Arabella Sun Shield Tinted</td><td>60</td><td>Tinted / no white cast</td><td>Rs. 1,500</td></tr>
+      <tr><td>8</td><td>Ammore Care Sunblock</td><td>50</td><td>Everyday family use</td><td>Rs. 1,400</td></tr>
+      <tr><td>9</td><td>Anexa 60 Vitamin C Lotion</td><td>60</td><td>Brightening + protection</td><td>Rs. 995</td></tr>
+      <tr><td>10</td><td>Arabella Sun Shield</td><td>60</td><td>Best budget</td><td>Rs. 750</td></tr>
+    </tbody>
+  </table>
+
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+    <p>
+      Korea's cult-favourite heartleaf (Houttuynia cordata) sunscreen combines SPF50+ PA+++
+      protection with a genuinely moisturizing, silky finish that leaves zero white cast on
+      South Asian skin tones. It layers beautifully under makeup and doesn't sting the eyes —
+      the most common complaint with cheaper formulas. If you want one sunscreen you'll
+      actually enjoy wearing every single day, this is it.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+    <p>
+      The "Airy" in the name is accurate: this is the lightest-feeling SPF50 cream at D.Watson,
+      drying down to a soft-matte finish that oily and acne-prone skin will appreciate in
+      Karachi or Lahore humidity. No pilling, no greasy film by mid-day.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} badge={products[2].badge}>
+    <p>
+      Aveeno's oat-based calming formula is the pick for reactive, redness-prone, or
+      rosacea-type skin. It's a moisturizer and sunscreen in one step, fragrance-light, and
+      from a dermatologist-recommended international brand — a strong choice if other
+      sunscreens have caused irritation.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url}>
+    <p>
+      Anua's panthenol version adds vitamin B5 to repair a compromised skin barrier while it
+      protects. Choose this over the standard Heart Leaf cream if your skin is dry, flaky, or
+      recovering from retinoid or acne treatment.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} badge={products[4].badge}>
+    <p>
+      At SPF 70, Asolite offers among the highest labelled protection at D.Watson for under
+      Rs. 2,300. A practical pick for outdoor workers, hikers in Margalla, or anyone who
+      spends long hours in direct sun.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} badge={products[5].badge}>
+    <p>
+      120ml of SPF75 for Rs. 1,550 makes this the best price-per-ml on the list — roughly
+      Rs. 13/ml versus Rs. 100+/ml for imported Korean options. Ideal as a generous body
+      sunscreen for arms, neck, and hands, or a family beach-day bottle.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} badge={products[6].badge}>
+    <p>
+      A tinted SPF60 that doubles as light base makeup and completely sidesteps the white-cast
+      problem. Good for medium-to-deep skin tones and for anyone who wants an even-toned
+      finish without foundation.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url}>
+    <p>
+      A no-frills SPF50 sunblock in a big 100ml tube at a family-friendly price. Reliable
+      everyday protection for school runs, commutes, and reapplication through the day.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url}>
+    <p>
+      Anexa combines SPF60 with vitamin C, so you get antioxidant brightening and UV
+      protection in one affordable step — a smart pick if pigmentation or dullness is your
+      main concern and your budget is under Rs. 1,000.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+    <p>
+      At Rs. 750, Arabella Sun Shield is the cheapest SPF60 at D.Watson and proof that
+      effective sun protection doesn't require an imported price tag. If cost has been the
+      reason you skip sunscreen, start here.
+    </p>
+  </ProductCard>
+
+  <h2>How to choose a sunscreen in Pakistan</h2>
+  <p>
+    <strong>SPF 50+ for daily use.</strong> Pakistan's UV index is among the highest in Asia
+    in summer; SPF 30 is the minimum, SPF 50+ is the practical default.
+    <strong>Match the texture to your skin:</strong> gel/airy formulas for oily skin, cream
+    formulas with panthenol or oats for dry and sensitive skin, tinted formulas if white cast
+    bothers you. <strong>Budget for reapplication:</strong> a sunscreen only works at its
+    labelled SPF if you use enough of it, so a Rs. 750–1,550 local option you apply generously
+    beats an expensive import you ration. Browse the full range at
+    <a href="https://dwatson.pk/skin-care/sun-protectors.html">dwatson.pk's Sun Protectors
+    category</a>.
+  </p>
+</ArticleLayout>
