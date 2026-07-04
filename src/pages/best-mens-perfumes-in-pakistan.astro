@@ -1,0 +1,155 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+
+const products = [
+  { name: 'Afnan 9PM EDP 100ml', url: 'https://dwatson.pk/afnan-9pm-edp-100ml.html', price: 8000, display: 'Rs. 8,000', badge: 'Best Overall' },
+  { name: 'Afnan 9PM Elixir Parfum Intense 100ml', url: 'https://dwatson.pk/afnan-9pm-elixir-parfum-intense-100ml.html', price: 12200, display: 'Rs. 12,200', badge: 'Strongest Projection' },
+  { name: 'Afnan Supremacy Not Only Intense Pour Homme EDP 100ml', url: 'https://dwatson.pk/afnan-supermacy-not-only-intense-pour-homme-edp-100ml.html', price: 10500, display: 'Rs. 10,500' },
+  { name: 'Afnan Supremacy In Oud EDP 100ml', url: 'https://dwatson.pk/afnan-supermacy-in-oud-edp-100ml.html', price: 11000, display: 'Rs. 11,000', badge: 'Best Oud' },
+  { name: 'Afnan Turathi Blue EDP 100ml', url: 'https://dwatson.pk/afnan-turathi-blue-edp-100ml.html', price: 8700, display: 'Rs. 8,700', badge: 'Best Fresh/Daytime' },
+  { name: 'Acqua di Parma Colonia Intensa EDC 100ml', url: 'https://dwatson.pk/acqua-di-parma-colonia-intensa-edc-100ml.html', price: 19500, display: 'Rs. 19,500', badge: 'Best Luxury Office Scent' },
+  { name: 'Acqua di Parma Oud & Spice EDP 100ml', url: 'https://dwatson.pk/acqua-di-parma-oud-spice-edp-100ml.html', price: 53000, display: 'Rs. 53,000', badge: 'Ultra-Luxury Pick' },
+  { name: 'Ajmal Wisal Dhahab EDP 50ml', url: 'https://dwatson.pk/ajmal-wisal-dhahab-edp-50ml.html', price: 8500, display: 'Rs. 8,500' },
+  { name: 'Ajmal Cento EDP 100ml', url: 'https://dwatson.pk/ajmal-cento-edp-100ml-men.html', price: 4050, display: 'Rs. 4,050', badge: 'Best Under Rs. 5,000' },
+  { name: 'AB Collection Secret Red 100ml', url: 'https://dwatson.pk/ab-collection-secret-red-100ml.html', price: 3200, display: 'Rs. 3,200', badge: 'Best Budget' },
+];
+
+const faqs = [
+  { q: 'What is the best men’s perfume in Pakistan under Rs. 10,000?', a: 'Afnan 9PM (about Rs. 8,000 for 100ml at D.Watson) is the standout — a sweet amber-vanilla evening scent that has become one of the most complimented fragrances in Pakistan, with performance rivalling designers triple its price. For daytime, Afnan Turathi Blue at Rs. 8,700 is the fresh counterpart.' },
+  { q: 'What’s the difference between EDP, EDT, and EDC?', a: 'It’s the concentration of fragrance oil: eau de cologne (EDC) is the lightest (2–4%), eau de toilette (EDT) sits around 5–15%, and eau de parfum (EDP) around 15–20%, lasting the longest. In Pakistan’s heat, EDPs are generally worth the premium for their staying power — but light EDCs like Colonia Intensa shine in summer offices.' },
+  { q: 'How do I make perfume last longer in hot weather?', a: 'Apply on moisturized skin straight after a shower, target pulse points plus clothing (fabric holds scent far longer than sweating skin), and store bottles away from heat and sunlight — not in a car. Sweet, amber, and oud fragrances naturally outlast fresh citrus ones in heat.' },
+  { q: 'Are Arabian perfume brands like Afnan and Ajmal good?', a: 'Yes — UAE houses like Afnan and Ajmal have become the best value segment in fragrance worldwide, offering EDP concentrations and long-lasting oriental compositions at a third of designer prices. Several, like Afnan 9PM and the Supremacy line, are global bestsellers in their own right.' },
+  { q: 'Which perfume is best for gifting?', a: 'A safe gift should be crowd-pleasing rather than challenging: Afnan 9PM for younger men, Acqua di Parma Colonia Intensa for a senior colleague or father, and Ajmal Wisal Dhahab for someone who loves traditional eastern scents. D.Watson also stocks dedicated perfume gift sets.' },
+];
+---
+
+<ArticleLayout
+  title="10 Best Men's Perfumes in Pakistan (2026) — From Rs. 3,200 to Luxury | Explore by D.Watson"
+  headline="10 Best Men's Perfumes in Pakistan (2026): Afnan, Ajmal & Luxury Picks"
+  description="The best men's perfumes you can buy in Pakistan in 2026 — viral Afnan 9PM, oud EDPs, fresh office scents, and luxury Acqua di Parma, from Rs. 3,200 at D.Watson."
+  datePublished="2026-07-04"
+  dateModified="2026-07-04"
+  products={products}
+  faqs={faqs}
+>
+  <p>
+    The fragrance market in Pakistan has quietly become world-class: the same UAE houses —
+    Afnan, Ajmal — that dominate global "best value fragrance" lists sit on D.Watson's
+    shelves next to Italian luxury from Acqua di Parma. Whether you want one signature scent
+    or a small rotation for office, evening, and events, these are the 10 best men's
+    fragrances in <a href="https://dwatson.pk/fragrances/men-s-perfume.html">D.Watson's
+    men's perfume range</a> right now, from Rs. 3,200 to Rs. 53,000.
+  </p>
+
+  <h2>Quick comparison</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Fragrance</th><th>Style</th><th>Best for</th><th>Price</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Afnan 9PM</td><td>Sweet amber-vanilla</td><td>Evenings, compliments</td><td>Rs. 8,000</td></tr>
+      <tr><td>2</td><td>Afnan 9PM Elixir Intense</td><td>Amber, intense</td><td>Winter, maximum projection</td><td>Rs. 12,200</td></tr>
+      <tr><td>3</td><td>Afnan Supremacy Not Only Intense</td><td>Spicy-sweet, rich</td><td>Special occasions</td><td>Rs. 10,500</td></tr>
+      <tr><td>4</td><td>Afnan Supremacy In Oud</td><td>Oud, woody</td><td>Best oud entry</td><td>Rs. 11,000</td></tr>
+      <tr><td>5</td><td>Afnan Turathi Blue</td><td>Fresh, aquatic</td><td>Daytime & summer</td><td>Rs. 8,700</td></tr>
+      <tr><td>6</td><td>Acqua di Parma Colonia Intensa</td><td>Citrus-woody EDC</td><td>Luxury office scent</td><td>Rs. 19,500</td></tr>
+      <tr><td>7</td><td>Acqua di Parma Oud &amp; Spice</td><td>Refined oud</td><td>Ultra-luxury statement</td><td>Rs. 53,000</td></tr>
+      <tr><td>8</td><td>Ajmal Wisal Dhahab</td><td>Oriental floral-woody</td><td>Traditional eastern taste</td><td>Rs. 8,500</td></tr>
+      <tr><td>9</td><td>Ajmal Cento</td><td>Versatile designer-style</td><td>Best under Rs. 5,000</td><td>Rs. 4,050</td></tr>
+      <tr><td>10</td><td>AB Collection Secret Red</td><td>Sweet-spicy</td><td>Best budget</td><td>Rs. 3,200</td></tr>
+    </tbody>
+  </table>
+
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+    <p>
+      The fragrance that made Arabian houses mainstream in Pakistan: a sweet, warm blend of
+      amber, vanilla, and cinnamon that earns compliments the way scents four times its
+      price do. Strong enough for winter evenings and weddings, and 100ml of EDP for
+      Rs. 8,000 is simply the best value on this list.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+    <p>
+      The Elixir turns the original 9PM up: denser, boozier, and longer-lasting, built for
+      cold evenings and events where you want to be noticed from across the room. If you
+      already love 9PM, this is the upgrade; if you prefer subtlety, stay with the original.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url}>
+    <p>
+      Often compared to Parfums de Marly's Layton, this is a rich, spicy-sweet crowd-pleaser
+      with an expensive-smelling drydown — the "special occasion" bottle in an affordable
+      rotation. Performs for hours on clothing.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} badge={products[3].badge}>
+    <p>
+      The most approachable way into oud: Afnan smooths the sharp, medicinal edge many
+      Western noses struggle with into a polished woody-amber that works at a mehndi or a
+      boardroom alike. A confident signature scent for Rs. 11,000.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} badge={products[4].badge}>
+    <p>
+      The daytime counterweight to all the sweetness above — a fresh, blue, aquatic-citrus
+      profile made for Pakistani summers, office wear, and shalwar kameez Fridays. Inoffensive
+      in the best sense: nobody dislikes it.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} badge={products[5].badge}>
+    <p>
+      Acqua di Parma's century-old Italian citrus, deepened with leather and woods. An EDC
+      concentration that stays close to the skin — the choice for men who consider loud
+      projection a faux pas and want quiet, unmistakable quality.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} badge={products[6].badge}>
+    <p>
+      For the collector: Italian refinement applied to eastern oud, resulting in one of the
+      most elegant takes on the note money can buy in Pakistan. At Rs. 53,000 it's a
+      statement purchase — or the wedding-gift bottle for someone who has everything.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url}>
+    <p>
+      "Wisal Dhahab" (golden union) is Ajmal doing what Ajmal has done since 1951: a proper
+      oriental floral-woody built around traditional tastes, dense and long-lasting. The
+      pick for fathers, uncles, and anyone who finds Western designers thin.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} badge={products[8].badge}>
+    <p>
+      A full 100ml EDP from a heritage house for Rs. 4,050 — Cento is a versatile,
+      modern-smelling all-rounder that covers office, daily wear, and evenings acceptably
+      well. The best single bottle if the budget stops at Rs. 5,000.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+    <p>
+      At Rs. 3,200, Secret Red is the entry point: a sweet-spicy profile in the popular
+      evening style, good for students and daily wear without guarding the bottle. Pair it
+      with a fresh scent later and you have a two-bottle rotation for under Rs. 12,000.
+    </p>
+  </ProductCard>
+
+  <h2>How to build a fragrance rotation</h2>
+  <p>
+    Most men need at most three bottles: <strong>one fresh</strong> (Turathi Blue or Colonia
+    Intensa) for daytime and summer, <strong>one sweet/warm</strong> (9PM or Supremacy Not
+    Only Intense) for evenings and winter, and <strong>one oud or oriental</strong> (Supremacy
+    In Oud, Wisal Dhahab) for weddings and Eid. Buy the evening scent first — it's the one
+    people remember you by. See the full range, including gift sets, at
+    <a href="https://dwatson.pk/fragrances/men-s-perfume.html">dwatson.pk's Men's Perfumes
+    category</a>.
+  </p>
+</ArticleLayout>

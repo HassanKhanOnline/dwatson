@@ -1,0 +1,154 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+
+const products = [
+  { name: 'Alpecin Dandruff Killer Shampoo 250ml', url: 'https://dwatson.pk/alpecin-shampoo-250ml-dandruff-killer.html', price: 1495, display: 'Rs. 1,495', badge: 'Best Overall' },
+  { name: 'Bionnex Anti Dandruff Shampoo 300ml', url: 'https://dwatson.pk/bionnex-shampoo-anti-dandruff-300ml.html', price: 3990, display: 'Rs. 3,990', badge: 'Best Premium' },
+  { name: 'Bonacure Antidandruff Shampoo 250ml', url: 'https://dwatson.pk/bonacure-shampoo-250ml-antidandruff.html', price: 4800, display: 'Rs. 4,800', badge: 'Best Salon-Grade' },
+  { name: 'C-Tar Shampoo 110ml', url: 'https://dwatson.pk/c-tar-shampoo-110ml.html', price: 780, display: 'Rs. 780', badge: 'Best for Stubborn Flaking' },
+  { name: 'Atoxil Anti Dandruff Shampoo', url: 'https://dwatson.pk/atoxil-anti-dandruff-shampoo.html', price: 890, display: 'Rs. 890', badge: 'Pharmacy Staple' },
+  { name: 'Anexa Shampoo', url: 'https://dwatson.pk/anexa-shampoo.html', price: 1050, display: 'Rs. 1,050' },
+  { name: 'Biopure Shampoo 120ml', url: 'https://dwatson.pk/biopure-shampoo-120ml.html', price: 950, display: 'Rs. 950' },
+  { name: 'Bremod Plant Extract Anti Dandruff Shampoo 250ml', url: 'https://dwatson.pk/bremod-shampoo-250mplant-extract-shampoo-250ml-anti-dandruff.html', price: 650, display: 'Rs. 650', badge: 'Best Budget' },
+  { name: 'Brylcreem Anti Dandruff Shampoo 140ml', url: 'https://dwatson.pk/brylcreem-anti-dandruff-140mll.html', price: 1150, display: 'Rs. 1,150' },
+  { name: 'Brylcreem Anti Dandruff Hair Cream 125ml', url: 'https://dwatson.pk/brylcreem-hair-cream-125ml-anti-dandruff.html', price: 650, display: 'Rs. 650', badge: 'Styling Add-On' },
+];
+
+const faqs = [
+  { q: 'What actually causes dandruff?', a: 'Most dandruff is driven by Malassezia, a yeast that lives on every scalp but overgrows in some people, accelerating skin turnover into visible flakes. That is why medicated antifungal shampoos work where regular "gentle" shampoos don’t — the target is the yeast, not dirt.' },
+  { q: 'How often should I use anti-dandruff shampoo?', a: 'Start with two to three washes a week, leaving the lather on the scalp for 3–5 minutes before rinsing — the most commonly skipped step. Once flaking is controlled, drop to once a week for maintenance; stopping entirely usually brings dandruff back within weeks.' },
+  { q: 'Why is my dandruff worse in winter in Pakistan?', a: 'Cold dry air, hot showers, and heavier oiling all tip the scalp environment in the yeast’s favour, which is why flaking peaks from November to February in most of Pakistan. Keep a medicated shampoo in rotation through winter rather than starting after flakes appear.' },
+  { q: 'When should I see a dermatologist instead?', a: 'If 6–8 weeks of consistent medicated shampooing hasn’t controlled it, or you have thick scaly plaques, intense itching, redness spreading beyond the hairline, or hair loss in patches — those point to seborrheic dermatitis, psoriasis, or fungal infection needing prescription treatment.' },
+  { q: 'Does hair oiling help or worsen dandruff?', a: 'Usually worsens it. Malassezia feeds on oils, so leaving mustard or coconut oil on an already-flaky scalp overnight effectively feeds the cause. If oiling is part of your routine, apply briefly before washing rather than leaving it on overnight.' },
+];
+---
+
+<ArticleLayout
+  title="10 Best Anti-Dandruff Shampoos in Pakistan (2026) — Pharmacist Picks | Explore by D.Watson"
+  headline="10 Best Anti-Dandruff Shampoos in Pakistan (2026): From Rs. 650 to Salon-Grade"
+  description="The best anti-dandruff shampoos available in Pakistan in 2026 — Alpecin, Bionnex, coal tar options for stubborn flaking, and budget picks from Rs. 650, all stocked at D.Watson."
+  datePublished="2026-07-04"
+  dateModified="2026-07-04"
+  products={products}
+  faqs={faqs}
+>
+  <p>
+    Dandruff affects roughly half of all adults at some point, and in Pakistan it peaks
+    every winter — yet most people fight it with regular cosmetic shampoos that never touch
+    the cause. The picks below from
+    <a href="https://dwatson.pk/personal-care/hair-care/anti-dandruff-products.html">
+    D.Watson's anti-dandruff range</a> are actual medicated and treatment-grade options,
+    ordered by our pharmacy team's assessment of effectiveness, brand pedigree, and price.
+  </p>
+
+  <h2>Quick comparison</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Product</th><th>Size</th><th>Best for</th><th>Price</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Alpecin Dandruff Killer</td><td>250ml</td><td>Best overall</td><td>Rs. 1,495</td></tr>
+      <tr><td>2</td><td>Bionnex Anti Dandruff</td><td>300ml</td><td>Premium, sensitive scalps</td><td>Rs. 3,990</td></tr>
+      <tr><td>3</td><td>Bonacure Antidandruff</td><td>250ml</td><td>Salon-grade, treated hair</td><td>Rs. 4,800</td></tr>
+      <tr><td>4</td><td>C-Tar Shampoo</td><td>110ml</td><td>Stubborn, scaly flaking</td><td>Rs. 780</td></tr>
+      <tr><td>5</td><td>Atoxil Anti Dandruff</td><td>—</td><td>Pharmacy staple</td><td>Rs. 890</td></tr>
+      <tr><td>6</td><td>Anexa Shampoo</td><td>—</td><td>Everyday medicated wash</td><td>Rs. 1,050</td></tr>
+      <tr><td>7</td><td>Biopure Shampoo</td><td>120ml</td><td>Trial size</td><td>Rs. 950</td></tr>
+      <tr><td>8</td><td>Bremod Plant Extract</td><td>250ml</td><td>Best budget 250ml</td><td>Rs. 650</td></tr>
+      <tr><td>9</td><td>Brylcreem Anti Dandruff</td><td>140ml</td><td>Familiar brand pick</td><td>Rs. 1,150</td></tr>
+      <tr><td>10</td><td>Brylcreem AD Hair Cream</td><td>125ml</td><td>Styling add-on</td><td>Rs. 650</td></tr>
+    </tbody>
+  </table>
+
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+    <p>
+      German-engineered and bluntly named, Alpecin's Dandruff Killer is the best balance of
+      genuine anti-fungal effectiveness, availability, and price at D.Watson. It clears
+      visible flakes within a few washes for most users and doubles as a refreshing daily
+      shampoo for oily scalps.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+    <p>
+      Turkish dermocosmetic brand Bionnex takes the gentle-but-medicated route: effective
+      flake control formulated for scalps that sting or itch with harsher medicated
+      shampoos. The 300ml bottle softens the premium price per wash.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} badge={products[2].badge}>
+    <p>
+      Schwarzkopf's Bonacure line is what salons reach for when a client has dandruff
+      <em>and</em> coloured or chemically treated hair — it controls flaking without
+      stripping colour or leaving hair straw-like, which cheaper medicated shampoos often do.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} badge={products[3].badge}>
+    <p>
+      Coal tar is the old-school heavy artillery — it slows the skin overgrowth behind
+      thick, scaly, stubborn flaking that regular anti-dandruff shampoos can't shift, and
+      dermatologists still recommend it for seborrheic dermatitis. Distinctive smell, but at
+      Rs. 780 it out-punches products triple its price.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} badge={products[4].badge}>
+    <p>
+      A long-standing Pakistani pharmacy shampoo that doctors here have recommended for
+      years. Unglamorous, reliable, and under Rs. 900 — the default local answer to routine
+      dandruff.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url}>
+    <p>
+      Anexa slots in as an everyday medicated wash — gentle enough for frequent use while
+      keeping mild, recurring flaking in check. A good maintenance shampoo after a stronger
+      product has done the initial clearing.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url}>
+    <p>
+      The 120ml size makes Biopure a low-commitment way to test whether a medicated shampoo
+      suits your scalp before buying a full bottle.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} badge={products[7].badge}>
+    <p>
+      A full 250ml with plant-extract actives for Rs. 650 — the cheapest per-ml option on
+      the list. For mild, cosmetic-level flaking on a student budget, start here and step up
+      only if it doesn't clear.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url}>
+    <p>
+      The trusted grooming name in an anti-dandruff format. A familiar, safe gift or
+      grab-and-go choice for men already loyal to the brand's creams and gels.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+    <p>
+      Not a shampoo — a styling cream with anti-dandruff support, for men who style daily
+      and find regular creams leave their scalp itchy. Use it alongside, not instead of, a
+      medicated shampoo.
+    </p>
+  </ProductCard>
+
+  <h2>How to actually clear dandruff</h2>
+  <p>
+    Technique beats product choice: <strong>lather, then wait 3–5 minutes</strong> before
+    rinsing so the actives reach the scalp; use the medicated shampoo two to three times
+    weekly until clear, then weekly for maintenance; wash out oils rather than leaving them
+    overnight; and rotate to a coal-tar option like C-Tar if flaking is thick and scaly.
+    No progress after 6–8 weeks means dermatologist, not another shampoo. Full range at
+    <a href="https://dwatson.pk/personal-care/hair-care/anti-dandruff-products.html">dwatson.pk's
+    Anti-Dandruff category</a>.
+  </p>
+</ArticleLayout>

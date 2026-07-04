@@ -1,0 +1,156 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+
+const products = [
+  { name: 'Beurer IH18 Nebulizer', url: 'https://dwatson.pk/beurer-ih18-nebulizer.html', price: 9500, display: 'Rs. 9,500', badge: 'Best Overall' },
+  { name: 'Beurer IH16 Nebulizer', url: 'https://dwatson.pk/beurer-ih16-nebuliser.html', price: 7700, display: 'Rs. 7,700', badge: 'Best Value Branded' },
+  { name: 'Believia Mesh Nebulizer MNB-05', url: 'https://dwatson.pk/believia-mesh-nebulizer-mnb-05.html', price: 6500, display: 'Rs. 6,500', badge: 'Best Budget Mesh' },
+  { name: 'Beurer IH58 Compact Compressor Nebulizer', url: 'https://dwatson.pk/beurer-ih58-nebulizer-compressor-wo-battery.html', price: 17500, display: 'Rs. 17,500', badge: 'Best Compact Premium' },
+  { name: 'Beurer IH28 Pro Nebulizer', url: 'https://dwatson.pk/beurer-nebuliser-ih-28-pro.html', price: 17600, display: 'Rs. 17,600', badge: 'Best for Daily Therapy' },
+  { name: 'Beurer IH55 Mesh Nebulizer with Battery', url: 'https://dwatson.pk/beurer-ih55-nebulizer-with-battery.html', price: 26000, display: 'Rs. 26,000', badge: 'Best Portable' },
+  { name: 'Laica NE2014 Nebulizer', url: 'https://dwatson.pk/laica-nebulizer-ne2014.html', price: 8450, display: 'Rs. 8,450' },
+  { name: 'Laica NE1011 Mask Nebulizer', url: 'https://dwatson.pk/laica-mask-nebulizer-ne1011.html', price: 8250, display: 'Rs. 8,250', badge: 'Best for Children' },
+  { name: 'Medico NB-110 Mesh Nebulizer', url: 'https://dwatson.pk/medico-nb-110-mesh-nebulizer.html', price: 6850, display: 'Rs. 6,850' },
+  { name: 'KY-1002C Procare Compressor Nebulizer', url: 'https://dwatson.pk/ky-1002c-procare-compressor-nebulizer.html', price: 6200, display: 'Rs. 6,200', badge: 'Best Budget Compressor' },
+];
+
+const faqs = [
+  { q: 'Compressor or mesh nebulizer — which should I buy?', a: 'Compressor nebulizers (Beurer IH18, IH16) are the durable, affordable workhorses for home use but are mains-powered and audible. Mesh nebulizers (Believia MNB-05, Beurer IH55) are near-silent, pocket-sized, and battery-run — better for children who resist noisy masks, travel, and load-shedding — at a higher price per unit of durability.' },
+  { q: 'Is a nebulizer better than an inhaler?', a: 'Not inherently — inhalers with a spacer deliver most medicines just as effectively for routine use, and your doctor’s prescription decides the device. Nebulizers shine for infants, the elderly, and anyone who can’t coordinate an inhaler, and during acute flare-ups when slow tidal breathing through a mask is easier.' },
+  { q: 'Can I use a nebulizer for a baby?', a: 'Yes, with a paediatric mask and only medicines prescribed by your paediatrician. Mesh or low-noise designs help — many infants tolerate treatment best while drowsy or asleep. The Laica NE1011 and mesh models like the Believia MNB-05 are the child-friendly picks on this list.' },
+  { q: 'What can I put in a nebulizer?', a: 'Only solutions your doctor prescribes — typically sterile saline or respiratory medicines like salbutamol or ipratropium respules. Never nebulize home remedies, essential oils, or oils of any kind; they can cause serious lung injury.' },
+  { q: 'How do I clean a nebulizer?', a: 'Rinse the medication cup and mouthpiece/mask with warm water after every use and air-dry; wash with mild soapy water daily and disinfect weekly per the manual. Replace filters and medication cups as scheduled — a dirty nebulizer can deliver bacteria straight into the lungs.' },
+];
+---
+
+<ArticleLayout
+  title="10 Best Nebulizers in Pakistan (2026) — Compressor vs Mesh Compared | Explore by D.Watson"
+  headline="10 Best Nebulizers in Pakistan (2026): Compressor vs Mesh, for Adults & Children"
+  description="The best nebulizer machines in Pakistan in 2026 — German Beurer compressors, silent portable mesh models, and child-friendly options from Rs. 6,200, all stocked at D.Watson."
+  datePublished="2026-07-04"
+  dateModified="2026-07-04"
+  products={products}
+  faqs={faqs}
+>
+  <p>
+    Between smog season in Punjab, dust, and some of the highest childhood asthma rates in
+    the region, a home nebulizer has become standard equipment for thousands of Pakistani
+    families. The choice comes down to <strong>compressor</strong> (durable, affordable,
+    mains-powered, audible) versus <strong>mesh</strong> (silent, portable, battery-run).
+    Our team ranked the options in
+    <a href="https://dwatson.pk/medical-devices/respiratory-wellness-devices/nebuliser.html">
+    D.Watson's nebulizer range</a> for home use, children, and travel.
+  </p>
+
+  <h2>Quick comparison</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Nebulizer</th><th>Type</th><th>Best for</th><th>Price</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Beurer IH18</td><td>Compressor</td><td>Best overall home unit</td><td>Rs. 9,500</td></tr>
+      <tr><td>2</td><td>Beurer IH16</td><td>Compressor</td><td>Best value German brand</td><td>Rs. 7,700</td></tr>
+      <tr><td>3</td><td>Believia MNB-05</td><td>Mesh</td><td>Best budget mesh</td><td>Rs. 6,500</td></tr>
+      <tr><td>4</td><td>Beurer IH58</td><td>Compact compressor</td><td>Quiet premium home use</td><td>Rs. 17,500</td></tr>
+      <tr><td>5</td><td>Beurer IH28 Pro</td><td>Compressor</td><td>Daily/intensive therapy</td><td>Rs. 17,600</td></tr>
+      <tr><td>6</td><td>Beurer IH55</td><td>Mesh + battery</td><td>Best portable</td><td>Rs. 26,000</td></tr>
+      <tr><td>7</td><td>Laica NE2014</td><td>Compressor</td><td>Family use</td><td>Rs. 8,450</td></tr>
+      <tr><td>8</td><td>Laica NE1011</td><td>Compressor + masks</td><td>Best for children</td><td>Rs. 8,250</td></tr>
+      <tr><td>9</td><td>Medico NB-110</td><td>Mesh</td><td>Portable second unit</td><td>Rs. 6,850</td></tr>
+      <tr><td>10</td><td>KY-1002C Procare</td><td>Compressor</td><td>Best budget compressor</td><td>Rs. 6,200</td></tr>
+    </tbody>
+  </table>
+
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+    <p>
+      Beurer's IH18 is the sweet spot for most families: German-brand build quality,
+      effective medication delivery for asthma, bronchitis, and seasonal flare-ups, and a
+      price under Rs. 10,000. Comes with adult and child accessories, and spares are easy to
+      find in Pakistan.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+    <p>
+      The IH16 delivers the same core compressor performance as its bigger siblings with
+      fewer frills — the cheapest way to get Beurer reliability into the house. If the
+      budget says under Rs. 8,000 but you want a European brand, this is the one.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} badge={products[2].badge}>
+    <p>
+      A palm-sized, near-silent mesh unit for Rs. 6,500 — remarkable value. Runs on
+      batteries (load-shedding-proof), slips into a school bag or travel pouch, and its
+      quiet operation makes it far easier to use on a sleeping child than any compressor.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} badge={products[3].badge}>
+    <p>
+      The IH58 shrinks compressor technology into a device that fits in one hand and runs
+      noticeably quieter than standard units. For adults nebulizing regularly at home who
+      find full-size compressors loud and clunky, it's worth the premium.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} badge={products[4].badge}>
+    <p>
+      The Pro model in Beurer's line, built for households where nebulization is daily
+      therapy rather than occasional rescue — faster nebulization of larger medication
+      volumes and duty cycles designed for heavy use.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} badge={products[5].badge}>
+    <p>
+      Beurer's flagship mesh unit with built-in rechargeable battery: silent, truly
+      portable, and independent of wall power entirely. The pick for frequent travellers
+      and for children who need treatment at school or on the go.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url}>
+    <p>
+      Italian brand Laica's family compressor — a solid European-brand alternative at a
+      mid-range price if the Beurer models are out of stock.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} badge={products[7].badge}>
+    <p>
+      The NE1011 ships mask-forward with child-appropriate fittings, making it the most
+      straightforward paediatric setup on the list. Pair it with patience and a cartoon,
+      and treatment time stops being a battle.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url}>
+    <p>
+      A second budget mesh option — useful as the portable backup unit in a two-nebulizer
+      household (compressor at home, mesh in the bag), a setup many asthma families settle
+      into.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+    <p>
+      The cheapest complete compressor system at D.Watson. For occasional winter use —
+      a couple of chest infections a year — it does the job for Rs. 6,200 and keeps the
+      premium units for heavier users.
+    </p>
+  </ProductCard>
+
+  <h2>Which nebulizer should you buy?</h2>
+  <p>
+    <strong>Most homes:</strong> Beurer IH18. <strong>Tight budget:</strong> KY-1002C
+    compressor or the Believia mesh — and given load-shedding, the battery-run mesh is often
+    the smarter Rs. 300 upgrade. <strong>Young children:</strong> Laica NE1011 or any mesh
+    unit for the silence. <strong>Travel and school:</strong> Beurer IH55. Whatever you buy,
+    use only prescribed solutions, clean after every use, and treat a nebulizer as a
+    delivery device — the treatment plan itself belongs to your doctor. Full range at
+    <a href="https://dwatson.pk/medical-devices/respiratory-wellness-devices/nebuliser.html">dwatson.pk's
+    Nebulizers category</a>.
+  </p>
+</ArticleLayout>

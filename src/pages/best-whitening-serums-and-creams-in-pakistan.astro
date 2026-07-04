@@ -1,0 +1,156 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import ProductCard from '../components/ProductCard.astro';
+
+const products = [
+  { name: 'Allure Care Vitamin C Supreme Serum 30ml', url: 'https://dwatson.pk/allure-care-vitamin-c-supreme-serum-30ml.html', price: 1895, display: 'Rs. 1,895', badge: 'Best Overall' },
+  { name: 'Ammore Care Face Serum 30ml Vitamin C & E', url: 'https://dwatson.pk/ammore-care-face-serum-30ml-vitamin-c-e.html', price: 1950, display: 'Rs. 1,950', badge: 'Best Antioxidant Combo' },
+  { name: 'Alphaglow Cream 10% 25gm', url: 'https://dwatson.pk/alphaglow-cream-10-25gm.html', price: 1369, display: 'Rs. 1,369', badge: 'Best Exfoliating Glow' },
+  { name: 'Alphasol Serum 30ml', url: 'https://dwatson.pk/alphasol-serum-30ml.html', price: 1600, display: 'Rs. 1,600' },
+  { name: 'Actiwhite Skin Cream 30gm', url: 'https://dwatson.pk/actiwhite-skin-cream.html', price: 1400, display: 'Rs. 1,400' },
+  { name: 'Acti Plus Cream 30g', url: 'https://dwatson.pk/acti-plus-cream-30g.html', price: 1495, display: 'Rs. 1,495' },
+  { name: 'A Tone Cream 25g', url: 'https://dwatson.pk/a-tone-cream-25g.html', price: 1004, display: 'Rs. 1,004', badge: 'Best Under Rs. 1,100' },
+  { name: 'Actiwhite Face Wash 125ml', url: 'https://dwatson.pk/actiwhite-facewash-125ml.html', price: 1250, display: 'Rs. 1,250', badge: 'Best Face Wash' },
+  { name: 'Acti Plus Face Wash 100ml', url: 'https://dwatson.pk/acti-plus-wace-wash-100ml.html', price: 900, display: 'Rs. 900' },
+  { name: 'Acta White Bar 75gm', url: 'https://dwatson.pk/acta-white-bar.html', price: 298, display: 'Rs. 298', badge: 'Best Budget' },
+];
+
+const faqs = [
+  { q: 'Do whitening creams actually work?', a: 'Pharmacy brightening products can genuinely fade dark spots, sun damage, and post-acne marks and restore your natural skin tone — typically over 8–12 weeks of consistent use. What they cannot safely do is change your genetic skin colour, and any product promising dramatic whitening in days should be avoided.' },
+  { q: 'What is the most important step for brighter skin?', a: 'Sunscreen. UV exposure is the main driver of pigmentation in Pakistan, and any brightening serum used without daily SPF 50 is working against the sun and losing. Pair any product in this guide with a sunscreen from our best sunscreens guide.' },
+  { q: 'Are steroid-based whitening creams safe?', a: 'No — unregulated creams containing potent steroids or high-dose hydroquinone (common in bazaar-market "beauty creams") cause skin thinning, rebound pigmentation, and permanent damage with prolonged use. Stick to registered pharmacy products, and involve a dermatologist for stubborn melasma.' },
+  { q: 'Vitamin C serum: morning or night?', a: 'Morning is ideal — vitamin C is an antioxidant that boosts your sunscreen’s defence against UV-driven pigmentation through the day. Apply on clean skin, wait a few minutes, then follow with moisturizer and SPF.' },
+  { q: 'How long before I see results from a brightening serum?', a: 'Expect early glow within 2–4 weeks and visible fading of dark spots by 8–12 weeks. Patch test on the inner arm for 48 hours first, introduce one new product at a time, and stop if you experience persistent stinging or redness.' },
+];
+---
+
+<ArticleLayout
+  title="10 Best Whitening & Brightening Serums and Creams in Pakistan (2026) | Explore by D.Watson"
+  headline="10 Best Whitening & Brightening Serums and Creams in Pakistan (2026)"
+  description="Pharmacist-reviewed skin brightening picks in Pakistan for 2026 — vitamin C serums, glow creams, and face washes for dark spots and uneven tone, from Rs. 298 at D.Watson."
+  datePublished="2026-07-04"
+  dateModified="2026-07-04"
+  products={products}
+  faqs={faqs}
+>
+  <p>
+    "Whitening" is Pakistan's most-searched skincare category — and its most dangerous, full
+    of unregulated bazaar creams that damage skin permanently. The safe route is registered
+    pharmacy products that fade <em>pigmentation</em> — sun spots, post-acne marks, uneven
+    tone — rather than bleaching skin. Our team picked the 10 best options from
+    <a href="https://dwatson.pk/skin-care/serums-and-treatments/whitening-and-brightening.html">
+    D.Watson's Whitening &amp; Brightening range</a>, all from documented brands, from a
+    Rs. 298 cleansing bar to vitamin C serums under Rs. 2,000.
+  </p>
+
+  <h2>Quick comparison</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Product</th><th>Format</th><th>Best for</th><th>Price</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Allure Care Vitamin C Supreme Serum</td><td>Serum</td><td>Best overall brightening</td><td>Rs. 1,895</td></tr>
+      <tr><td>2</td><td>Ammore Care Vitamin C &amp; E Serum</td><td>Serum</td><td>Antioxidant combo</td><td>Rs. 1,950</td></tr>
+      <tr><td>3</td><td>Alphaglow Cream 10%</td><td>Cream</td><td>Exfoliating glow</td><td>Rs. 1,369</td></tr>
+      <tr><td>4</td><td>Alphasol Serum</td><td>Serum</td><td>Texture + tone</td><td>Rs. 1,600</td></tr>
+      <tr><td>5</td><td>Actiwhite Skin Cream</td><td>Cream</td><td>Night routine</td><td>Rs. 1,400</td></tr>
+      <tr><td>6</td><td>Acti Plus Cream</td><td>Cream</td><td>Spot-prone skin</td><td>Rs. 1,495</td></tr>
+      <tr><td>7</td><td>A Tone Cream</td><td>Cream</td><td>Best under Rs. 1,100</td><td>Rs. 1,004</td></tr>
+      <tr><td>8</td><td>Actiwhite Face Wash</td><td>Cleanser</td><td>Daily brightening wash</td><td>Rs. 1,250</td></tr>
+      <tr><td>9</td><td>Acti Plus Face Wash</td><td>Cleanser</td><td>Budget cleanser</td><td>Rs. 900</td></tr>
+      <tr><td>10</td><td>Acta White Bar</td><td>Cleansing bar</td><td>Best budget</td><td>Rs. 298</td></tr>
+    </tbody>
+  </table>
+
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+    <p>
+      A dedicated vitamin C serum is the evidence-backed core of any brightening routine,
+      and Allure Care's Supreme formula is the strongest all-round pick at D.Watson under
+      Rs. 2,000. Used every morning under sunscreen, it targets dullness, dark spots, and
+      early photo-aging simultaneously.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+    <p>
+      Ammore Care pairs vitamin C with vitamin E — a classic antioxidant duo where the E
+      stabilises and extends the C's protective effect. A close runner-up to our top pick;
+      choose it if your skin runs dry, as the E adds a touch more comfort.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} badge={products[2].badge}>
+    <p>
+      Alphaglow's 10% formula takes the exfoliating route to radiance: dissolving the dull,
+      pigmented surface layer so fresher skin shows through. Use it at night, two to three
+      times a week to start — and never skip morning sunscreen while using it.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url}>
+    <p>
+      A serum-format option in the same family, for those who prefer lightweight layers over
+      creams. Sensible next step once your skin has adjusted to milder products.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url}>
+    <p>
+      Actiwhite's cream is a pharmacy staple for evening use — richer than a serum, applied
+      as the last step of a night routine. Pairs naturally with the Actiwhite face wash
+      below for a simple two-product brand routine.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url}>
+    <p>
+      Acti Plus is aimed at spot-prone, uneven skin — the pick when post-acne marks, rather
+      than overall dullness, are the main complaint. Apply only to affected areas if your
+      skin is sensitive.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} badge={products[6].badge}>
+    <p>
+      The best complete brightening cream under Rs. 1,100. A Tone is a straightforward,
+      well-tolerated evening cream for gradually evening out tone — a good first product
+      before committing to pricier serums.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} badge={products[7].badge}>
+    <p>
+      Cleansers only touch skin for thirty seconds, so treat this as the supporting act:
+      a gentle daily brightening wash that preps skin for serums without stripping it.
+      125ml lasts about two months of twice-daily use.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url}>
+    <p>
+      The budget cleanser of the list at Rs. 900 — pair it with the A Tone cream for a
+      complete starter routine under Rs. 2,000.
+    </p>
+  </ProductCard>
+
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+    <p>
+      At Rs. 298, this cleansing bar is the cheapest legitimate entry into the category —
+      and a far safer spend than any unregistered "magic" cream at the same price point.
+      Use on face and body; follow with moisturizer.
+    </p>
+  </ProductCard>
+
+  <h2>The safe brightening routine</h2>
+  <p>
+    <strong>Morning:</strong> gentle wash → vitamin C serum → moisturizer →
+    <a href="/best-sunscreens-in-pakistan/">SPF 50 sunscreen</a> (non-negotiable — skipping
+    it cancels everything else). <strong>Night:</strong> wash → brightening cream, adding an
+    exfoliating product like Alphaglow two or three nights a week. <strong>Red flags to
+    avoid:</strong> creams with no ingredient list, promises of "whitening in 7 days", or
+    mercury/steroid bazaar formulas. Stubborn melasma deserves a dermatologist, not a
+    stronger cream. Browse the full range at
+    <a href="https://dwatson.pk/skin-care/serums-and-treatments/whitening-and-brightening.html">dwatson.pk's
+    Whitening &amp; Brightening category</a>.
+  </p>
+</ArticleLayout>
