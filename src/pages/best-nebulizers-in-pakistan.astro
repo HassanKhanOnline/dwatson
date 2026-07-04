@@ -3,16 +3,16 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 
 const products = [
-  { name: 'Beurer IH18 Nebulizer', url: 'https://dwatson.pk/beurer-ih18-nebulizer.html', price: 9500, display: 'Rs. 9,500', badge: 'Best Overall' },
-  { name: 'Beurer IH16 Nebulizer', url: 'https://dwatson.pk/beurer-ih16-nebuliser.html', price: 7700, display: 'Rs. 7,700', badge: 'Best Value Branded' },
-  { name: 'Believia Mesh Nebulizer MNB-05', url: 'https://dwatson.pk/believia-mesh-nebulizer-mnb-05.html', price: 6500, display: 'Rs. 6,500', badge: 'Best Budget Mesh' },
-  { name: 'Beurer IH58 Compact Compressor Nebulizer', url: 'https://dwatson.pk/beurer-ih58-nebulizer-compressor-wo-battery.html', price: 17500, display: 'Rs. 17,500', badge: 'Best Compact Premium' },
-  { name: 'Beurer IH28 Pro Nebulizer', url: 'https://dwatson.pk/beurer-nebuliser-ih-28-pro.html', price: 17600, display: 'Rs. 17,600', badge: 'Best for Daily Therapy' },
-  { name: 'Beurer IH55 Mesh Nebulizer with Battery', url: 'https://dwatson.pk/beurer-ih55-nebulizer-with-battery.html', price: 26000, display: 'Rs. 26,000', badge: 'Best Portable' },
-  { name: 'Laica NE2014 Nebulizer', url: 'https://dwatson.pk/laica-nebulizer-ne2014.html', price: 8450, display: 'Rs. 8,450' },
+  { name: 'Beurer IH18 Nebulizer', url: 'https://dwatson.pk/beurer-ih18-nebulizer.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Beurer_Ih18_Nebulizer.jpeg', price: 9500, display: 'Rs. 9,500', badge: 'Best Overall' },
+  { name: 'Beurer IH16 Nebulizer', url: 'https://dwatson.pk/beurer-ih16-nebuliser.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Beurer_Ih16_Nebuliser.jpeg', price: 7700, display: 'Rs. 7,700', badge: 'Best Value Branded' },
+  { name: 'Believia Mesh Nebulizer MNB-05', url: 'https://dwatson.pk/believia-mesh-nebulizer-mnb-05.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Believia_Mesh_Nebulizer_Mnb_05.jpeg', price: 6500, display: 'Rs. 6,500', badge: 'Best Budget Mesh' },
+  { name: 'Beurer IH58 Compact Compressor Nebulizer', url: 'https://dwatson.pk/beurer-ih58-nebulizer-compressor-wo-battery.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Beurer_Ih58_Nebulizer_Compressor_Wo_Battery.jpeg', price: 17500, display: 'Rs. 17,500', badge: 'Best Compact Premium' },
+  { name: 'Beurer IH28 Pro Nebulizer', url: 'https://dwatson.pk/beurer-nebuliser-ih-28-pro.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Beurer_Nebuliser_Ih_28_Pro.jpeg', price: 17600, display: 'Rs. 17,600', badge: 'Best for Daily Therapy' },
+  { name: 'Beurer IH55 Mesh Nebulizer with Battery', url: 'https://dwatson.pk/beurer-ih55-nebulizer-with-battery.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Beurer_Ih55_Nebulizer_With_Battery.png', price: 26000, display: 'Rs. 26,000', badge: 'Best Portable' },
+  { name: 'Laica NE2014 Nebulizer', url: 'https://dwatson.pk/laica-nebulizer-ne2014.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/L/a/Laica_Nebulizer_Ne2014.jpeg', price: 8450, display: 'Rs. 8,450' },
   { name: 'Laica NE1011 Mask Nebulizer', url: 'https://dwatson.pk/laica-mask-nebulizer-ne1011.html', price: 8250, display: 'Rs. 8,250', badge: 'Best for Children' },
-  { name: 'Medico NB-110 Mesh Nebulizer', url: 'https://dwatson.pk/medico-nb-110-mesh-nebulizer.html', price: 6850, display: 'Rs. 6,850' },
-  { name: 'KY-1002C Procare Compressor Nebulizer', url: 'https://dwatson.pk/ky-1002c-procare-compressor-nebulizer.html', price: 6200, display: 'Rs. 6,200', badge: 'Best Budget Compressor' },
+  { name: 'Medico NB-110 Mesh Nebulizer', url: 'https://dwatson.pk/medico-nb-110-mesh-nebulizer.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/M/e/Medico_Nb_110_Mesh_Nebulizer.png', price: 6850, display: 'Rs. 6,850' },
+  { name: 'KY-1002C Procare Compressor Nebulizer', url: 'https://dwatson.pk/ky-1002c-procare-compressor-nebulizer.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/K/y/Ky_1002c_Procare_Compressor_Nebulizer.png', price: 6200, display: 'Rs. 6,200', badge: 'Best Budget Compressor' },
 ];
 
 const faqs = [
@@ -62,7 +62,7 @@ const faqs = [
     </tbody>
   </table>
 
-  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} image={products[0].image} badge={products[0].badge}>
     <p>
       Beurer's IH18 is the sweet spot for most families: German-brand build quality,
       effective medication delivery for asthma, bronchitis, and seasonal flare-ups, and a
@@ -71,7 +71,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} image={products[1].image} badge={products[1].badge}>
     <p>
       The IH16 delivers the same core compressor performance as its bigger siblings with
       fewer frills — the cheapest way to get Beurer reliability into the house. If the
@@ -79,7 +79,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} badge={products[2].badge}>
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} image={products[2].image} badge={products[2].badge}>
     <p>
       A palm-sized, near-silent mesh unit for Rs. 6,500 — remarkable value. Runs on
       batteries (load-shedding-proof), slips into a school bag or travel pouch, and its
@@ -87,7 +87,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} badge={products[3].badge}>
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} image={products[3].image} badge={products[3].badge}>
     <p>
       The IH58 shrinks compressor technology into a device that fits in one hand and runs
       noticeably quieter than standard units. For adults nebulizing regularly at home who
@@ -95,7 +95,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} badge={products[4].badge}>
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} image={products[4].image} badge={products[4].badge}>
     <p>
       The Pro model in Beurer's line, built for households where nebulization is daily
       therapy rather than occasional rescue — faster nebulization of larger medication
@@ -103,7 +103,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} badge={products[5].badge}>
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} image={products[5].image} badge={products[5].badge}>
     <p>
       Beurer's flagship mesh unit with built-in rechargeable battery: silent, truly
       portable, and independent of wall power entirely. The pick for frequent travellers
@@ -111,14 +111,14 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url}>
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} image={products[6].image}>
     <p>
       Italian brand Laica's family compressor — a solid European-brand alternative at a
       mid-range price if the Beurer models are out of stock.
     </p>
   </ProductCard>
 
-  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} badge={products[7].badge}>
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} image={products[7].image} badge={products[7].badge}>
     <p>
       The NE1011 ships mask-forward with child-appropriate fittings, making it the most
       straightforward paediatric setup on the list. Pair it with patience and a cartoon,
@@ -126,7 +126,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url}>
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} image={products[8].image}>
     <p>
       A second budget mesh option — useful as the portable backup unit in a two-nebulizer
       household (compressor at home, mesh in the bag), a setup many asthma families settle
@@ -134,7 +134,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} image={products[9].image} badge={products[9].badge}>
     <p>
       The cheapest complete compressor system at D.Watson. For occasional winter use —
       a couple of chest infections a year — it does the job for Rs. 6,200 and keeps the

@@ -5,6 +5,7 @@ interface Product {
   name: string;
   url: string;
   price: number; // numeric PKR for schema
+  image?: string;
 }
 interface Faq {
   q: string;
@@ -62,6 +63,7 @@ const schema = [
         '@type': 'Product',
         name: p.name,
         url: p.url,
+        ...(p.image ? { image: p.image } : {}),
         offers: {
           '@type': 'Offer',
           price: p.price,

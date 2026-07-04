@@ -4,15 +4,15 @@ import ProductCard from '../components/ProductCard.astro';
 
 const products = [
   { name: 'Allure Care Vitamin C Supreme Serum 30ml', url: 'https://dwatson.pk/allure-care-vitamin-c-supreme-serum-30ml.html', price: 1895, display: 'Rs. 1,895', badge: 'Best Overall' },
-  { name: 'Ammore Care Face Serum 30ml Vitamin C & E', url: 'https://dwatson.pk/ammore-care-face-serum-30ml-vitamin-c-e.html', price: 1950, display: 'Rs. 1,950', badge: 'Best Antioxidant Combo' },
-  { name: 'Alphaglow Cream 10% 25gm', url: 'https://dwatson.pk/alphaglow-cream-10-25gm.html', price: 1369, display: 'Rs. 1,369', badge: 'Best Exfoliating Glow' },
+  { name: 'Ammore Care Face Serum 30ml Vitamin C & E', url: 'https://dwatson.pk/ammore-care-face-serum-30ml-vitamin-c-e.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/m/Ammore_Care_Face_Serum_30ml_Vitamin_C_E.png', price: 1950, display: 'Rs. 1,950', badge: 'Best Antioxidant Combo' },
+  { name: 'Alphaglow Cream 10% 25gm', url: 'https://dwatson.pk/alphaglow-cream-10-25gm.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/l/Alphaglow_Cream_10_25gm.jpeg', price: 1369, display: 'Rs. 1,369', badge: 'Best Exfoliating Glow' },
   { name: 'Alphasol Serum 30ml', url: 'https://dwatson.pk/alphasol-serum-30ml.html', price: 1600, display: 'Rs. 1,600' },
-  { name: 'Actiwhite Skin Cream 30gm', url: 'https://dwatson.pk/actiwhite-skin-cream.html', price: 1400, display: 'Rs. 1,400' },
-  { name: 'Acti Plus Cream 30g', url: 'https://dwatson.pk/acti-plus-cream-30g.html', price: 1495, display: 'Rs. 1,495' },
-  { name: 'A Tone Cream 25g', url: 'https://dwatson.pk/a-tone-cream-25g.html', price: 1004, display: 'Rs. 1,004', badge: 'Best Under Rs. 1,100' },
-  { name: 'Actiwhite Face Wash 125ml', url: 'https://dwatson.pk/actiwhite-facewash-125ml.html', price: 1250, display: 'Rs. 1,250', badge: 'Best Face Wash' },
-  { name: 'Acti Plus Face Wash 100ml', url: 'https://dwatson.pk/acti-plus-wace-wash-100ml.html', price: 900, display: 'Rs. 900' },
-  { name: 'Acta White Bar 75gm', url: 'https://dwatson.pk/acta-white-bar.html', price: 298, display: 'Rs. 298', badge: 'Best Budget' },
+  { name: 'Actiwhite Skin Cream 30gm', url: 'https://dwatson.pk/actiwhite-skin-cream.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Actiwhite_Skin_Cream_30gm_1768808747.png', price: 1400, display: 'Rs. 1,400' },
+  { name: 'Acti Plus Cream 30g', url: 'https://dwatson.pk/acti-plus-cream-30g.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Acti_Plus_Cream_30g.png', price: 1495, display: 'Rs. 1,495' },
+  { name: 'A Tone Cream 25g', url: 'https://dwatson.pk/a-tone-cream-25g.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/_/A_Tone_Cream_25g.png', price: 1004, display: 'Rs. 1,004', badge: 'Best Under Rs. 1,100' },
+  { name: 'Actiwhite Face Wash 125ml', url: 'https://dwatson.pk/actiwhite-facewash-125ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Actiwhite_Face_Wash_125ml.png', price: 1250, display: 'Rs. 1,250', badge: 'Best Face Wash' },
+  { name: 'Acti Plus Face Wash 100ml', url: 'https://dwatson.pk/acti-plus-wace-wash-100ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Acti_Plus_Wace_Wash_100ml.png', price: 900, display: 'Rs. 900' },
+  { name: 'Acta White Bar 75gm', url: 'https://dwatson.pk/acta-white-bar.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Acta_White_Bar_75gm.png', price: 298, display: 'Rs. 298', badge: 'Best Budget' },
 ];
 
 const faqs = [
@@ -62,7 +62,7 @@ const faqs = [
     </tbody>
   </table>
 
-  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} image={products[0].image} badge={products[0].badge}>
     <p>
       A dedicated vitamin C serum is the evidence-backed core of any brightening routine,
       and Allure Care's Supreme formula is the strongest all-round pick at D.Watson under
@@ -71,7 +71,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} image={products[1].image} badge={products[1].badge}>
     <p>
       Ammore Care pairs vitamin C with vitamin E — a classic antioxidant duo where the E
       stabilises and extends the C's protective effect. A close runner-up to our top pick;
@@ -79,7 +79,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} badge={products[2].badge}>
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} image={products[2].image} badge={products[2].badge}>
     <p>
       Alphaglow's 10% formula takes the exfoliating route to radiance: dissolving the dull,
       pigmented surface layer so fresher skin shows through. Use it at night, two to three
@@ -87,14 +87,14 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url}>
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} image={products[3].image}>
     <p>
       A serum-format option in the same family, for those who prefer lightweight layers over
       creams. Sensible next step once your skin has adjusted to milder products.
     </p>
   </ProductCard>
 
-  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url}>
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} image={products[4].image}>
     <p>
       Actiwhite's cream is a pharmacy staple for evening use — richer than a serum, applied
       as the last step of a night routine. Pairs naturally with the Actiwhite face wash
@@ -102,7 +102,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url}>
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} image={products[5].image}>
     <p>
       Acti Plus is aimed at spot-prone, uneven skin — the pick when post-acne marks, rather
       than overall dullness, are the main complaint. Apply only to affected areas if your
@@ -110,7 +110,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} badge={products[6].badge}>
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} image={products[6].image} badge={products[6].badge}>
     <p>
       The best complete brightening cream under Rs. 1,100. A Tone is a straightforward,
       well-tolerated evening cream for gradually evening out tone — a good first product
@@ -118,7 +118,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} badge={products[7].badge}>
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} image={products[7].image} badge={products[7].badge}>
     <p>
       Cleansers only touch skin for thirty seconds, so treat this as the supporting act:
       a gentle daily brightening wash that preps skin for serums without stripping it.
@@ -126,14 +126,14 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url}>
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} image={products[8].image}>
     <p>
       The budget cleanser of the list at Rs. 900 — pair it with the A Tone cream for a
       complete starter routine under Rs. 2,000.
     </p>
   </ProductCard>
 
-  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} image={products[9].image} badge={products[9].badge}>
     <p>
       At Rs. 298, this cleansing bar is the cheapest legitimate entry into the category —
       and a far safer spend than any unregistered "magic" cream at the same price point.

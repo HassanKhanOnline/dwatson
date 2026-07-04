@@ -3,16 +3,16 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 
 const products = [
-  { name: 'Alpecin Dandruff Killer Shampoo 250ml', url: 'https://dwatson.pk/alpecin-shampoo-250ml-dandruff-killer.html', price: 1495, display: 'Rs. 1,495', badge: 'Best Overall' },
-  { name: 'Bionnex Anti Dandruff Shampoo 300ml', url: 'https://dwatson.pk/bionnex-shampoo-anti-dandruff-300ml.html', price: 3990, display: 'Rs. 3,990', badge: 'Best Premium' },
-  { name: 'Bonacure Antidandruff Shampoo 250ml', url: 'https://dwatson.pk/bonacure-shampoo-250ml-antidandruff.html', price: 4800, display: 'Rs. 4,800', badge: 'Best Salon-Grade' },
-  { name: 'C-Tar Shampoo 110ml', url: 'https://dwatson.pk/c-tar-shampoo-110ml.html', price: 780, display: 'Rs. 780', badge: 'Best for Stubborn Flaking' },
-  { name: 'Atoxil Anti Dandruff Shampoo', url: 'https://dwatson.pk/atoxil-anti-dandruff-shampoo.html', price: 890, display: 'Rs. 890', badge: 'Pharmacy Staple' },
-  { name: 'Anexa Shampoo', url: 'https://dwatson.pk/anexa-shampoo.html', price: 1050, display: 'Rs. 1,050' },
-  { name: 'Biopure Shampoo 120ml', url: 'https://dwatson.pk/biopure-shampoo-120ml.html', price: 950, display: 'Rs. 950' },
-  { name: 'Bremod Plant Extract Anti Dandruff Shampoo 250ml', url: 'https://dwatson.pk/bremod-shampoo-250mplant-extract-shampoo-250ml-anti-dandruff.html', price: 650, display: 'Rs. 650', badge: 'Best Budget' },
-  { name: 'Brylcreem Anti Dandruff Shampoo 140ml', url: 'https://dwatson.pk/brylcreem-anti-dandruff-140mll.html', price: 1150, display: 'Rs. 1,150' },
-  { name: 'Brylcreem Anti Dandruff Hair Cream 125ml', url: 'https://dwatson.pk/brylcreem-hair-cream-125ml-anti-dandruff.html', price: 650, display: 'Rs. 650', badge: 'Styling Add-On' },
+  { name: 'Alpecin Dandruff Killer Shampoo 250ml', url: 'https://dwatson.pk/alpecin-shampoo-250ml-dandruff-killer.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/l/Alpecin_Shampoo_250ml_Dandruff_Killer.jpeg', price: 1495, display: 'Rs. 1,495', badge: 'Best Overall' },
+  { name: 'Bionnex Anti Dandruff Shampoo 300ml', url: 'https://dwatson.pk/bionnex-shampoo-anti-dandruff-300ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/i/Bionnex_Shampoo_Anti_Dandruff_300ml.png', price: 3990, display: 'Rs. 3,990', badge: 'Best Premium' },
+  { name: 'Bonacure Antidandruff Shampoo 250ml', url: 'https://dwatson.pk/bonacure-shampoo-250ml-antidandruff.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/o/Bonacure_shampoo_250ml_antidandruff.png', price: 4800, display: 'Rs. 4,800', badge: 'Best Salon-Grade' },
+  { name: 'C-Tar Shampoo 110ml', url: 'https://dwatson.pk/c-tar-shampoo-110ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/C/_/C_Tar_Shampoo_110ml_1771313411.png', price: 780, display: 'Rs. 780', badge: 'Best for Stubborn Flaking' },
+  { name: 'Atoxil Anti Dandruff Shampoo', url: 'https://dwatson.pk/atoxil-anti-dandruff-shampoo.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/t/Atoxil_Anti_Dandruff_Shampoo.png', price: 890, display: 'Rs. 890', badge: 'Pharmacy Staple' },
+  { name: 'Anexa Shampoo', url: 'https://dwatson.pk/anexa-shampoo.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/n/Anexa_Shampoo_1771312746.png', price: 1050, display: 'Rs. 1,050' },
+  { name: 'Biopure Shampoo 120ml', url: 'https://dwatson.pk/biopure-shampoo-120ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/i/Biopure_Shampoo_120ml.png', price: 950, display: 'Rs. 950' },
+  { name: 'Bremod Plant Extract Anti Dandruff Shampoo 250ml', url: 'https://dwatson.pk/bremod-shampoo-250mplant-extract-shampoo-250ml-anti-dandruff.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/r/Bremod_Shampoo_250mplant_Extract_Shampoo_250ml_Anti_Dandruff.jpeg', price: 650, display: 'Rs. 650', badge: 'Best Budget' },
+  { name: 'Brylcreem Anti Dandruff Shampoo 140ml', url: 'https://dwatson.pk/brylcreem-anti-dandruff-140mll.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/r/Brylcreem_Anti_Dandruff_140mll.png', price: 1150, display: 'Rs. 1,150' },
+  { name: 'Brylcreem Anti Dandruff Hair Cream 125ml', url: 'https://dwatson.pk/brylcreem-hair-cream-125ml-anti-dandruff.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/r/Brylcreem_Hair_Cream_125ml_Anti_Dandruff.png', price: 650, display: 'Rs. 650', badge: 'Styling Add-On' },
 ];
 
 const faqs = [
@@ -61,7 +61,7 @@ const faqs = [
     </tbody>
   </table>
 
-  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} image={products[0].image} badge={products[0].badge}>
     <p>
       German-engineered and bluntly named, Alpecin's Dandruff Killer is the best balance of
       genuine anti-fungal effectiveness, availability, and price at D.Watson. It clears
@@ -70,7 +70,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} image={products[1].image} badge={products[1].badge}>
     <p>
       Turkish dermocosmetic brand Bionnex takes the gentle-but-medicated route: effective
       flake control formulated for scalps that sting or itch with harsher medicated
@@ -78,7 +78,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} badge={products[2].badge}>
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} image={products[2].image} badge={products[2].badge}>
     <p>
       Schwarzkopf's Bonacure line is what salons reach for when a client has dandruff
       <em>and</em> coloured or chemically treated hair — it controls flaking without
@@ -86,7 +86,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} badge={products[3].badge}>
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} image={products[3].image} badge={products[3].badge}>
     <p>
       Coal tar is the old-school heavy artillery — it slows the skin overgrowth behind
       thick, scaly, stubborn flaking that regular anti-dandruff shampoos can't shift, and
@@ -95,7 +95,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} badge={products[4].badge}>
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} image={products[4].image} badge={products[4].badge}>
     <p>
       A long-standing Pakistani pharmacy shampoo that doctors here have recommended for
       years. Unglamorous, reliable, and under Rs. 900 — the default local answer to routine
@@ -103,7 +103,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url}>
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} image={products[5].image}>
     <p>
       Anexa slots in as an everyday medicated wash — gentle enough for frequent use while
       keeping mild, recurring flaking in check. A good maintenance shampoo after a stronger
@@ -111,14 +111,14 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url}>
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} image={products[6].image}>
     <p>
       The 120ml size makes Biopure a low-commitment way to test whether a medicated shampoo
       suits your scalp before buying a full bottle.
     </p>
   </ProductCard>
 
-  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} badge={products[7].badge}>
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} image={products[7].image} badge={products[7].badge}>
     <p>
       A full 250ml with plant-extract actives for Rs. 650 — the cheapest per-ml option on
       the list. For mild, cosmetic-level flaking on a student budget, start here and step up
@@ -126,14 +126,14 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url}>
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} image={products[8].image}>
     <p>
       The trusted grooming name in an anti-dandruff format. A familiar, safe gift or
       grab-and-go choice for men already loyal to the brand's creams and gels.
     </p>
   </ProductCard>
 
-  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} image={products[9].image} badge={products[9].badge}>
     <p>
       Not a shampoo — a styling cream with anti-dandruff support, for men who style daily
       and find regular creams leave their scalp itchy. Use it alongside, not instead of, a

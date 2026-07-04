@@ -3,16 +3,16 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 
 const products = [
-  { name: 'AND UA-611 Digital BP Monitor', url: 'https://dwatson.pk/and-ua611-bp-monitor-digital.html', price: 6000, display: 'Rs. 6,000', badge: 'Best Overall' },
-  { name: 'Believia Upper Arm Digital BP Monitor LD-532', url: 'https://dwatson.pk/believia-arm-type-digital-bp-monitor-ld-532.html', price: 8500, display: 'Rs. 8,500', badge: 'Best for Home Use' },
-  { name: 'Believia BP60A Upper Arm BP Monitor', url: 'https://dwatson.pk/believia-bp60a-bp-app-uper-arm.html', price: 7490, display: 'Rs. 7,490' },
-  { name: 'Believia BP Monitor KF-66EP', url: 'https://dwatson.pk/believia-bp-monitor-kf-66ep.html', price: 7490, display: 'Rs. 7,490' },
-  { name: 'Believia Digital Blood Pressure Monitor DBP-1333', url: 'https://dwatson.pk/believia-digital-blood-pressure-monitor-dbp1333.html', price: 6490, display: 'Rs. 6,490', badge: 'Best Value Digital' },
-  { name: 'Believia BP Mercurial Family Kit', url: 'https://dwatson.pk/believia-bp-app-mercurial-family-kit.html', price: 8350, display: 'Rs. 8,350', badge: 'For Clinics' },
-  { name: 'Believia Palm Type Aneroid Sphygmomanometer HS-201T', url: 'https://dwatson.pk/believia-palm-type-aneroid-sphygmomanometer-hs-201t.html', price: 3500, display: 'Rs. 3,500' },
-  { name: 'Believia BP AN02 Palm Type Aneroid', url: 'https://dwatson.pk/believia-bp-app-an02-palm-type-aneroid.html', price: 3700, display: 'Rs. 3,700' },
-  { name: 'Believia Aneroid HS-20A BP Monitor', url: 'https://dwatson.pk/believia-aneroid-hs-20a-bp-monitor.html', price: 2240, display: 'Rs. 2,240', badge: 'Best Budget' },
-  { name: 'Atom BP Cuff Single Tube (Replacement)', url: 'https://dwatson.pk/atom-bp-app-cuff-single-tube.html', price: 1200, display: 'Rs. 1,200', badge: 'Accessory Pick' },
+  { name: 'AND UA-611 Digital BP Monitor', url: 'https://dwatson.pk/and-ua611-bp-monitor-digital.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/n/And_ua611_bp_app_digital_1.jpeg', price: 6000, display: 'Rs. 6,000', badge: 'Best Overall' },
+  { name: 'Believia Upper Arm Digital BP Monitor LD-532', url: 'https://dwatson.pk/believia-arm-type-digital-bp-monitor-ld-532.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Believia__arm_type_digital_bp_monitor_ld_532_1775628755.jpg', price: 8500, display: 'Rs. 8,500', badge: 'Best for Home Use' },
+  { name: 'Believia BP60A Upper Arm BP Monitor', url: 'https://dwatson.pk/believia-bp60a-bp-app-uper-arm.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Believia_Bp60a_Bp_App_Uper_Arm.jpeg', price: 7490, display: 'Rs. 7,490' },
+  { name: 'Believia BP Monitor KF-66EP', url: 'https://dwatson.pk/believia-bp-monitor-kf-66ep.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Believia__bp_monitor_kf_66ep.jpeg', price: 7490, display: 'Rs. 7,490' },
+  { name: 'Believia Digital Blood Pressure Monitor DBP-1333', url: 'https://dwatson.pk/believia-digital-blood-pressure-monitor-dbp1333.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Believia_digital_blood_pressure_monitor_dbp1333.jpeg', price: 6490, display: 'Rs. 6,490', badge: 'Best Value Digital' },
+  { name: 'Believia BP Mercurial Family Kit', url: 'https://dwatson.pk/believia-bp-app-mercurial-family-kit.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Believia_Bp_App_Mercurial_Family_Kit.png', price: 8350, display: 'Rs. 8,350', badge: 'For Clinics' },
+  { name: 'Believia Palm Type Aneroid Sphygmomanometer HS-201T', url: 'https://dwatson.pk/believia-palm-type-aneroid-sphygmomanometer-hs-201t.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Believia_palm_type_aneroid_sphygmomanometer_hs_201t.jpeg', price: 3500, display: 'Rs. 3,500' },
+  { name: 'Believia BP AN02 Palm Type Aneroid', url: 'https://dwatson.pk/believia-bp-app-an02-palm-type-aneroid.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Believia_Bp_App_An02_Palm_Type_Aneroid.png', price: 3700, display: 'Rs. 3,700' },
+  { name: 'Believia Aneroid HS-20A BP Monitor', url: 'https://dwatson.pk/believia-aneroid-hs-20a-bp-monitor.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Believia_aneroid_hs_20a_BP_Monitor.png', price: 2240, display: 'Rs. 2,240', badge: 'Best Budget' },
+  { name: 'Atom BP Cuff Single Tube (Replacement)', url: 'https://dwatson.pk/atom-bp-app-cuff-single-tube.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/t/Atom_bp_app_cuff_single_tube.jpg', price: 1200, display: 'Rs. 1,200', badge: 'Accessory Pick' },
 ];
 
 const faqs = [
@@ -62,7 +62,7 @@ const faqs = [
     </tbody>
   </table>
 
-  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} image={products[0].image} badge={products[0].badge}>
     <p>
       A&amp;D Medical (Japan) invented the digital blood pressure monitor category, and the
       UA-611 is its proven entry model: one-button operation, IHB (irregular heartbeat)
@@ -71,7 +71,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} image={products[1].image} badge={products[1].badge}>
     <p>
       The LD-532 pairs a large, high-contrast display with a wide-range upper-arm cuff,
       making readings easy for older family members to take and read unassisted. WHO
@@ -80,7 +80,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url}>
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} image={products[2].image}>
     <p>
       A straightforward automatic upper-arm unit with big digits and simple one-button
       workflow — a solid gift for parents or grandparents managing hypertension who don't
@@ -88,7 +88,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url}>
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} image={products[3].image}>
     <p>
       The KF-66EP's multi-reading memory makes it the pick if your doctor has asked for a
       7-day home BP diary — take morning and evening readings and scroll back through the
@@ -96,7 +96,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} badge={products[4].badge}>
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} image={products[4].image} badge={products[4].badge}>
     <p>
       The most affordable automatic upper-arm digital in D.Watson's range. If the UA-611 is
       out of stock or budget, the DBP-1333 covers the essentials — automatic inflation,
@@ -104,7 +104,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} badge={products[5].badge}>
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} image={products[5].image} badge={products[5].badge}>
     <p>
       The traditional mercury-column sphygmomanometer remains the reference standard many
       physicians trained on. This family kit is for clinics, family doctors, and trained
@@ -112,21 +112,21 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url}>
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} image={products[6].image}>
     <p>
       A palm-type aneroid gauge that lets a trained caregiver take quick manual readings
       one-handed. Lighter and safer than mercury, with no batteries to fail.
     </p>
   </ProductCard>
 
-  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url}>
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} image={products[7].image}>
     <p>
       Similar palm-type aneroid design with a comfortable squeeze bulb — a common choice for
       nursing and medical students learning auscultatory measurement.
     </p>
   </ProductCard>
 
-  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} badge={products[8].badge}>
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} image={products[8].image} badge={products[8].badge}>
     <p>
       At Rs. 2,240 this is the cheapest reliable route to BP measurement at D.Watson. Paired
       with a basic stethoscope, it's the standard kit found in GP clinics across Pakistan —
@@ -134,7 +134,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} image={products[9].image} badge={products[9].badge}>
     <p>
       Cuffs wear out before monitors do. This single-tube replacement cuff revives an
       existing aneroid device for Rs. 1,200 instead of replacing the whole unit — check your

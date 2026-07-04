@@ -3,16 +3,16 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 
 const products = [
-  { name: 'Anua Heart Leaf Silky Moist Sun Cream SPF50+ PA+++', url: 'https://dwatson.pk/anua-heart-leaf-silky-moist-sun-cream-spf50-pa.html', price: 7000, display: 'Rs. 7,000', badge: 'Best Overall' },
-  { name: 'Anua Airy Sun Cream SPF50 50ml', url: 'https://dwatson.pk/anua-airy-sun-cream-spf50-50ml.html', price: 8000, display: 'Rs. 8,000', badge: 'Best for Oily Skin' },
-  { name: 'Aveeno Sunscreen Ultra Calming Daily Moisturizer 68ml', url: 'https://dwatson.pk/aveeno-sunscreen-68ml-ultra-calming-daily-moisturizer.html', price: 3300, display: 'Rs. 3,300', badge: 'Best for Sensitive Skin' },
-  { name: 'Anua Heartleaf Panthenol Silky Moisture Mild Screen SPF50', url: 'https://dwatson.pk/anua-heartleaf-panthenol-silky-moisture-mild-screen-spf50.html', price: 6500, display: 'Rs. 6,500' },
-  { name: 'Asolite Sun Screen SPF70 50gm', url: 'https://dwatson.pk/asolite-sun-screen-spf70-50gm.html', price: 2295, display: 'Rs. 2,295', badge: 'Highest SPF' },
-  { name: 'Ammore Care Sun Cream SPF75 120ml', url: 'https://dwatson.pk/ammore-care-sun-cream-spf75-120ml-sun-protect.html', price: 1550, display: 'Rs. 1,550', badge: 'Best Value' },
-  { name: 'Arabella Sun Shield Tinted SPF60 50ml', url: 'https://dwatson.pk/arabella-sun-shield-tinted-spf60-50ml.html', price: 1500, display: 'Rs. 1,500', badge: 'Best Tinted' },
-  { name: 'Ammore Care Sunblock SPF50 100ml', url: 'https://dwatson.pk/ammore-care-sunblock-spf50-100ml.html', price: 1400, display: 'Rs. 1,400' },
-  { name: 'Anexa 60 Vitamin C Sunscreen Lotion', url: 'https://dwatson.pk/anexa-60-vitamin-c-sunscreen-lotion.html', price: 995, display: 'Rs. 995' },
-  { name: 'Arabella Sun Shield 60 SPF 50ml', url: 'https://dwatson.pk/arabella-sun-shield-60spf-50ml.html', price: 750, display: 'Rs. 750', badge: 'Best Budget' },
+  { name: 'Anua Heart Leaf Silky Moist Sun Cream SPF50+ PA+++', url: 'https://dwatson.pk/anua-heart-leaf-silky-moist-sun-cream-spf50-pa.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/n/Anua_Heart_Leaf_Silky_Moist_Sun_Cream_Spf50__Pa___.jpeg', price: 7000, display: 'Rs. 7,000', badge: 'Best Overall' },
+  { name: 'Anua Airy Sun Cream SPF50 50ml', url: 'https://dwatson.pk/anua-airy-sun-cream-spf50-50ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/n/Anua_Airy_Sun_Cream_Spf50_50ml_1771396506.png', price: 8000, display: 'Rs. 8,000', badge: 'Best for Oily Skin' },
+  { name: 'Aveeno Sunscreen Ultra Calming Daily Moisturizer 68ml', url: 'https://dwatson.pk/aveeno-sunscreen-68ml-ultra-calming-daily-moisturizer.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/v/Aveeno_Sunscreen_68ml_Ultra_Calming_Daily_Moisturizer_1.png', price: 3300, display: 'Rs. 3,300', badge: 'Best for Sensitive Skin' },
+  { name: 'Anua Heartleaf Panthenol Silky Moisture Mild Screen SPF50', url: 'https://dwatson.pk/anua-heartleaf-panthenol-silky-moisture-mild-screen-spf50.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/n/Anua_heartleaf_panthenol_silky_moisture_mild_screen_spf50_1.png', price: 6500, display: 'Rs. 6,500' },
+  { name: 'Asolite Sun Screen SPF70 50gm', url: 'https://dwatson.pk/asolite-sun-screen-spf70-50gm.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/s/Asolite_Sun_Screen_Spf70_50gm.png', price: 2295, display: 'Rs. 2,295', badge: 'Highest SPF' },
+  { name: 'Ammore Care Sun Cream SPF75 120ml', url: 'https://dwatson.pk/ammore-care-sun-cream-spf75-120ml-sun-protect.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/m/Ammore_Care_Sun_Cream_Spf75_120ml_Sun_Protect.png', price: 1550, display: 'Rs. 1,550', badge: 'Best Value' },
+  { name: 'Arabella Sun Shield Tinted SPF60 50ml', url: 'https://dwatson.pk/arabella-sun-shield-tinted-spf60-50ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/r/Arabella_Sun_Shield_Tinted_Spf60_50ml.jpeg', price: 1500, display: 'Rs. 1,500', badge: 'Best Tinted' },
+  { name: 'Ammore Care Sunblock SPF50 100ml', url: 'https://dwatson.pk/ammore-care-sunblock-spf50-100ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/m/Ammore_Care_Sunblock_Spf50_100ml.png', price: 1400, display: 'Rs. 1,400' },
+  { name: 'Anexa 60 Vitamin C Sunscreen Lotion', url: 'https://dwatson.pk/anexa-60-vitamin-c-sunscreen-lotion.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/n/Anexa_60_Vitamin_C_Sunscreen_Lotion_1771396073.png', price: 995, display: 'Rs. 995' },
+  { name: 'Arabella Sun Shield 60 SPF 50ml', url: 'https://dwatson.pk/arabella-sun-shield-60spf-50ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/r/Arabella_Sun_Shield_60spf_50ml_1771397231.png', price: 750, display: 'Rs. 750', badge: 'Best Budget' },
 ];
 
 const faqs = [
@@ -61,7 +61,7 @@ const faqs = [
     </tbody>
   </table>
 
-  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} image={products[0].image} badge={products[0].badge}>
     <p>
       Korea's cult-favourite heartleaf (Houttuynia cordata) sunscreen combines SPF50+ PA+++
       protection with a genuinely moisturizing, silky finish that leaves zero white cast on
@@ -71,7 +71,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} image={products[1].image} badge={products[1].badge}>
     <p>
       The "Airy" in the name is accurate: this is the lightest-feeling SPF50 cream at D.Watson,
       drying down to a soft-matte finish that oily and acne-prone skin will appreciate in
@@ -79,7 +79,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} badge={products[2].badge}>
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} image={products[2].image} badge={products[2].badge}>
     <p>
       Aveeno's oat-based calming formula is the pick for reactive, redness-prone, or
       rosacea-type skin. It's a moisturizer and sunscreen in one step, fragrance-light, and
@@ -88,7 +88,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url}>
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} image={products[3].image}>
     <p>
       Anua's panthenol version adds vitamin B5 to repair a compromised skin barrier while it
       protects. Choose this over the standard Heart Leaf cream if your skin is dry, flaky, or
@@ -96,7 +96,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} badge={products[4].badge}>
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} image={products[4].image} badge={products[4].badge}>
     <p>
       At SPF 70, Asolite offers among the highest labelled protection at D.Watson for under
       Rs. 2,300. A practical pick for outdoor workers, hikers in Margalla, or anyone who
@@ -104,7 +104,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} badge={products[5].badge}>
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} image={products[5].image} badge={products[5].badge}>
     <p>
       120ml of SPF75 for Rs. 1,550 makes this the best price-per-ml on the list — roughly
       Rs. 13/ml versus Rs. 100+/ml for imported Korean options. Ideal as a generous body
@@ -112,7 +112,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} badge={products[6].badge}>
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} image={products[6].image} badge={products[6].badge}>
     <p>
       A tinted SPF60 that doubles as light base makeup and completely sidesteps the white-cast
       problem. Good for medium-to-deep skin tones and for anyone who wants an even-toned
@@ -120,14 +120,14 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url}>
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} image={products[7].image}>
     <p>
       A no-frills SPF50 sunblock in a big 100ml tube at a family-friendly price. Reliable
       everyday protection for school runs, commutes, and reapplication through the day.
     </p>
   </ProductCard>
 
-  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url}>
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} image={products[8].image}>
     <p>
       Anexa combines SPF60 with vitamin C, so you get antioxidant brightening and UV
       protection in one affordable step — a smart pick if pigmentation or dullness is your
@@ -135,7 +135,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} image={products[9].image} badge={products[9].badge}>
     <p>
       At Rs. 750, Arabella Sun Shield is the cheapest SPF60 at D.Watson and proof that
       effective sun protection doesn't require an imported price tag. If cost has been the

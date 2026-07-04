@@ -3,16 +3,16 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 
 const products = [
-  { name: 'Accu-Chek Instant Glucose Monitor', url: 'https://dwatson.pk/accu-chek-instant-glucose-monitor.html', price: 5293, display: 'Rs. 5,293', badge: 'Best Overall' },
-  { name: 'Accu-Chek Guide Glucose Monitor', url: 'https://dwatson.pk/accu-chek-guide.html', price: 4500, display: 'Rs. 4,500', badge: 'Best for Frequent Testing' },
-  { name: 'Accu-Chek Active Glucose Monitor', url: 'https://dwatson.pk/accu-chek-active-glucose-monitor.html', price: 4483, display: 'Rs. 4,483', badge: 'Most Popular' },
-  { name: 'Accu-Chek Instant S Glucose Monitor', url: 'https://dwatson.pk/accu-chek-instant-s-glucose-monitor.html', price: 3621, display: 'Rs. 3,621', badge: 'Best Budget Meter' },
-  { name: 'Accu-Chek Instant Strips 100s', url: 'https://dwatson.pk/accu-chek-instant-strips-100s.html', price: 4130, display: 'Rs. 4,130', badge: 'Best Value Strips' },
-  { name: 'Accu-Chek Active Strips 100s', url: 'https://dwatson.pk/accu-chek-active-glucose-monitoring-strips-100.html', price: 3748, display: 'Rs. 3,748' },
-  { name: 'Accu-Chek Guide Strips 50s', url: 'https://dwatson.pk/accu-chek-guide-glucose-monitoring-strips-50.html', price: 3400, display: 'Rs. 3,400' },
-  { name: 'Accu-Chek Instant Strips 50s', url: 'https://dwatson.pk/accu-chek-instant-strip-50s.html', price: 2117, display: 'Rs. 2,117' },
-  { name: 'Accu-Chek Active Strips 50s', url: 'https://dwatson.pk/accu-chek-active-glucose-monitoring-strips-50.html', price: 2013, display: 'Rs. 2,013' },
-  { name: 'Accu-Chek Performa Strips 25s', url: 'https://dwatson.pk/accu-chek-performa-strip-25s.html', price: 1840, display: 'Rs. 1,840' },
+  { name: 'Accu-Chek Instant Glucose Monitor', url: 'https://dwatson.pk/accu-chek-instant-glucose-monitor.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Accu_Chek_Instant_Glucose_Monitor_1.png', price: 5293, display: 'Rs. 5,293', badge: 'Best Overall' },
+  { name: 'Accu-Chek Guide Glucose Monitor', url: 'https://dwatson.pk/accu-chek-guide.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Accu_Chek_Guide_Glucose_Monitor.png', price: 4500, display: 'Rs. 4,500', badge: 'Best for Frequent Testing' },
+  { name: 'Accu-Chek Active Glucose Monitor', url: 'https://dwatson.pk/accu-chek-active-glucose-monitor.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Accu_Chek_Active_Glucose_Monitor.png', price: 4483, display: 'Rs. 4,483', badge: 'Most Popular' },
+  { name: 'Accu-Chek Instant S Glucose Monitor', url: 'https://dwatson.pk/accu-chek-instant-s-glucose-monitor.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Accu_Chek_Instant_S_Glucose_Monitor_1.png', price: 3621, display: 'Rs. 3,621', badge: 'Best Budget Meter' },
+  { name: 'Accu-Chek Instant Strips 100s', url: 'https://dwatson.pk/accu-chek-instant-strips-100s.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Accu_Chek_Instant_Strips_100s.jpeg', price: 4130, display: 'Rs. 4,130', badge: 'Best Value Strips' },
+  { name: 'Accu-Chek Active Strips 100s', url: 'https://dwatson.pk/accu-chek-active-glucose-monitoring-strips-100.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Accu_Chek_Active_Strips_100s_1.png', price: 3748, display: 'Rs. 3,748' },
+  { name: 'Accu-Chek Guide Strips 50s', url: 'https://dwatson.pk/accu-chek-guide-glucose-monitoring-strips-50.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Accu_Chek_Guide_Strips_50s_1.png', price: 3400, display: 'Rs. 3,400' },
+  { name: 'Accu-Chek Instant Strips 50s', url: 'https://dwatson.pk/accu-chek-instant-strip-50s.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Accu_Chek_Instant_Strip_50s.png', price: 2117, display: 'Rs. 2,117' },
+  { name: 'Accu-Chek Active Strips 50s', url: 'https://dwatson.pk/accu-chek-active-glucose-monitoring-strips-50.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Accu_Chek_Active_Strips_50s.png', price: 2013, display: 'Rs. 2,013' },
+  { name: 'Accu-Chek Performa Strips 25s', url: 'https://dwatson.pk/accu-chek-performa-strip-25s.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Accu_Chek_Performa_Strip_25s.jpeg', price: 1840, display: 'Rs. 1,840' },
 ];
 
 const faqs = [
@@ -63,7 +63,7 @@ const faqs = [
     </tbody>
   </table>
 
-  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} image={products[0].image} badge={products[0].badge}>
     <p>
       The Instant is Accu-Chek's current flagship for home users: a wide strip dosing area
       that needs a tiny blood drop, colour-coded target-range indicator, and Bluetooth sync
@@ -72,7 +72,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} image={products[1].image} badge={products[1].badge}>
     <p>
       The Guide's signature feature is its spill-resistant SmartPack strip vial — take one
       strip out without dumping the rest, which matters when you test several times a day
@@ -81,7 +81,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} badge={products[2].badge}>
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} image={products[2].image} badge={products[2].badge}>
     <p>
       The Active has been Pakistan's default glucometer for over a decade — nearly every
       pharmacy stocks its strips, and its 100-strip packs are the cheapest per test on this
@@ -90,7 +90,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} badge={products[3].badge}>
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} image={products[3].image} badge={products[3].badge}>
     <p>
       The Instant S is the app-free version of the Instant at about Rs. 1,700 less. Same
       strips, same accuracy, minus the Bluetooth — the right pick if readings will be
@@ -98,7 +98,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} badge={products[4].badge}>
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} image={products[4].image} badge={products[4].badge}>
     <p>
       At Rs. 4,130 for 100, Instant strips work out to about Rs. 41 per test — roughly 20%
       cheaper than buying 25-packs. If you test daily, the 100-pack pays for the difference
@@ -106,7 +106,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url}>
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} image={products[5].image}>
     <p>
       The running-cost champion: Rs. 37 per strip in the 100-pack for Active meter owners.
       If minimizing monthly spend is the priority, the Active meter + these strips is the
@@ -114,14 +114,14 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url}>
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} image={products[6].image}>
     <p>
       Refills for the Guide meter's spill-resistant system. Slightly pricier per strip than
       Active or Instant families — the trade-off for the SmartPack convenience.
     </p>
   </ProductCard>
 
-  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url}>
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} image={products[7].image}>
     <p>
       The sensible monthly pack for once-or-twice-daily Instant testers — 50 strips at
       Rs. 2,117 covers a month of twice-daily checks with a better per-strip price than the
@@ -129,7 +129,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url}>
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} image={products[8].image}>
     <p>
       The equivalent monthly refill for Active meter owners at Rs. 2,013. Check the expiry
       date when buying strip multipacks — strips, not meters, are the perishable part of
@@ -137,7 +137,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url}>
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} image={products[9].image}>
     <p>
       Still running an older Accu-Chek Performa meter? These 25-count refills keep it in
       service. If you're buying strips this small regularly, though, upgrading to an

@@ -3,16 +3,16 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 
 const products = [
-  { name: 'NF Nutri C 1000mg Tablets 30s', url: 'https://dwatson.pk/nf-nutri-c-1000mg-tab-30s.html', price: 990, display: 'Rs. 990', badge: 'Best Overall' },
-  { name: 'NF Nutra C Plus C500 + Zinc Tablets 30s', url: 'https://dwatson.pk/nf-nutra-c-plus-c500-zinc-tablets-30s.html', price: 690, display: 'Rs. 690', badge: 'Best for Immunity' },
-  { name: 'Core C Sachets 1000mg 30s (Sugar Free)', url: 'https://dwatson.pk/core-c-sachets-1000mg-30s-sugar-free.html', price: 900, display: 'Rs. 900', badge: 'Best Sugar-Free' },
-  { name: 'NF Extra C Tablets 90s', url: 'https://dwatson.pk/nf-extra-c-tabs-90s.html', price: 1800, display: 'Rs. 1,800', badge: 'Best Bulk Buy' },
-  { name: 'GH C-500 Vitamin C 500mg Tablets 30s', url: 'https://dwatson.pk/glr-c-500-vitamin-c-500mg-tablets-30s.html', price: 1195, display: 'Rs. 1,195' },
-  { name: 'Askob C 500mg Tablets 30s', url: 'https://dwatson.pk/askob-c-500mg-tablets-30s.html', price: 1140, display: 'Rs. 1,140' },
-  { name: 'NF Nutra C Plus Tablets 60s', url: 'https://dwatson.pk/nf-nutra-c-plus-tablets-60s.html', price: 1150, display: 'Rs. 1,150' },
-  { name: 'Nutribase Mycee Plus 500mg Tablets 30s', url: 'https://dwatson.pk/nutribase-mycee-plus-tab-500mg-30s.html', price: 899, display: 'Rs. 899' },
-  { name: 'NF Extra C Tablets 30s', url: 'https://dwatson.pk/nf-extra-c-30s-tablets.html', price: 690, display: 'Rs. 690' },
-  { name: 'High C 1000 Sachet', url: 'https://dwatson.pk/high-c-1000-sachet.html', price: 250, display: 'Rs. 250', badge: 'Best Budget Trial' },
+  { name: 'NF Nutri C 1000mg Tablets 30s', url: 'https://dwatson.pk/nf-nutri-c-1000mg-tab-30s.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/N/f/Nf_nutri_c_1000mg_tab_30s_1773827613.png', price: 990, display: 'Rs. 990', badge: 'Best Overall' },
+  { name: 'NF Nutra C Plus C500 + Zinc Tablets 30s', url: 'https://dwatson.pk/nf-nutra-c-plus-c500-zinc-tablets-30s.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/N/f/Nf_Nutra_C_Plus_C500_Zinc_Tab_30S.png', price: 690, display: 'Rs. 690', badge: 'Best for Immunity' },
+  { name: 'Core C Sachets 1000mg 30s (Sugar Free)', url: 'https://dwatson.pk/core-c-sachets-1000mg-30s-sugar-free.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/C/o/Core_C_Sachets_1000mg_30s_Sugar_Free_1772442350.png', price: 900, display: 'Rs. 900', badge: 'Best Sugar-Free' },
+  { name: 'NF Extra C Tablets 90s', url: 'https://dwatson.pk/nf-extra-c-tabs-90s.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/N/f/Nf_extra_c_tabs_90s_1773743452.png', price: 1800, display: 'Rs. 1,800', badge: 'Best Bulk Buy' },
+  { name: 'GH C-500 Vitamin C 500mg Tablets 30s', url: 'https://dwatson.pk/glr-c-500-vitamin-c-500mg-tablets-30s.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/G/H/GH_C_500_Vitamin_C_500mg_Tablets_30s_1772443068.png', price: 1195, display: 'Rs. 1,195' },
+  { name: 'Askob C 500mg Tablets 30s', url: 'https://dwatson.pk/askob-c-500mg-tablets-30s.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/s/Askob_C_500mg_Tablets_30s_1772442075.png', price: 1140, display: 'Rs. 1,140' },
+  { name: 'NF Nutra C Plus Tablets 60s', url: 'https://dwatson.pk/nf-nutra-c-plus-tablets-60s.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/N/f/Nf_Nutra_C_Plus_Tablets_60s_1772438402.png', price: 1150, display: 'Rs. 1,150' },
+  { name: 'Nutribase Mycee Plus 500mg Tablets 30s', url: 'https://dwatson.pk/nutribase-mycee-plus-tab-500mg-30s.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/N/u/Nutribase_mycee_plus_tab_500mg_30s.png', price: 899, display: 'Rs. 899' },
+  { name: 'NF Extra C Tablets 30s', url: 'https://dwatson.pk/nf-extra-c-30s-tablets.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/N/f/Nf_Extra_C_30s_Tablets_1772186171.png', price: 690, display: 'Rs. 690' },
+  { name: 'High C 1000 Sachet', url: 'https://dwatson.pk/high-c-1000-sachet.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/H/i/High_C_1000_Sachet_1.png', price: 250, display: 'Rs. 250', badge: 'Best Budget Trial' },
 ];
 
 const faqs = [
@@ -61,7 +61,7 @@ const faqs = [
     </tbody>
   </table>
 
-  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} image={products[0].image} badge={products[0].badge}>
     <p>
       A full 1,000mg per tablet from NF, one of Pakistan's most established nutraceutical
       brands, at Rs. 33 per day. One tablet covers the dose most supplement research uses —
@@ -69,7 +69,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} image={products[1].image} badge={products[1].badge}>
     <p>
       Vitamin C and zinc are the two nutrients most studied together for immune support, and
       this combines both in one Rs. 23/day tablet. The pick for cold-and-flu season, frequent
@@ -77,7 +77,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} badge={products[2].badge}>
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} image={products[2].image} badge={products[2].badge}>
     <p>
       A 1,000mg effervescent-style sachet that's completely sugar-free — the right format for
       diabetic users and anyone who dislikes swallowing tablets. Dissolve in water for a
@@ -85,49 +85,49 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} badge={products[3].badge}>
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} image={products[3].image} badge={products[3].badge}>
     <p>
       Ninety tablets for Rs. 1,800 works out to Rs. 20 per day — the lowest cost per dose of
       any multi-pack on this list. Buy once, cover the whole quarter.
     </p>
   </ProductCard>
 
-  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url}>
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} image={products[4].image}>
     <p>
       A clean, single-ingredient 500mg ascorbic acid tablet. A dependable mid-range choice if
       you prefer splitting your intake into morning and evening doses for steadier levels.
     </p>
   </ProductCard>
 
-  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url}>
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} image={products[5].image}>
     <p>
       Askob C's 500mg tablets are widely recommended by local physicians and pharmacists —
       a familiar, trusted name if you want a brand your doctor will recognise.
     </p>
   </ProductCard>
 
-  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url}>
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} image={products[6].image}>
     <p>
       The two-month economy pack of NF's Nutra C Plus. Slightly better per-tablet value than
       the 30s pack, and one less pharmacy trip.
     </p>
   </ProductCard>
 
-  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url}>
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} image={products[7].image}>
     <p>
       Nutribase's Mycee Plus rounds out the 500mg tablet options under Rs. 900 — worth
       choosing when it's on promotion or when other brands are out of stock.
     </p>
   </ProductCard>
 
-  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url}>
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} image={products[8].image}>
     <p>
       The 30-tablet starter pack of NF Extra C at Rs. 690. Begin here, and step up to the
       90s pack once you know the routine sticks.
     </p>
   </ProductCard>
 
-  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} image={products[9].image} badge={products[9].badge}>
     <p>
       A single 1,000mg sachet for Rs. 250 — the cheapest way to try the drinkable format
       before committing to a full box, or to keep in a travel bag for when a cold hits.

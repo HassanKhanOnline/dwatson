@@ -3,16 +3,16 @@ import ArticleLayout from '../layouts/ArticleLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 
 const products = [
-  { name: 'Afnan 9PM EDP 100ml', url: 'https://dwatson.pk/afnan-9pm-edp-100ml.html', price: 8000, display: 'Rs. 8,000', badge: 'Best Overall' },
-  { name: 'Afnan 9PM Elixir Parfum Intense 100ml', url: 'https://dwatson.pk/afnan-9pm-elixir-parfum-intense-100ml.html', price: 12200, display: 'Rs. 12,200', badge: 'Strongest Projection' },
-  { name: 'Afnan Supremacy Not Only Intense Pour Homme EDP 100ml', url: 'https://dwatson.pk/afnan-supermacy-not-only-intense-pour-homme-edp-100ml.html', price: 10500, display: 'Rs. 10,500' },
-  { name: 'Afnan Supremacy In Oud EDP 100ml', url: 'https://dwatson.pk/afnan-supermacy-in-oud-edp-100ml.html', price: 11000, display: 'Rs. 11,000', badge: 'Best Oud' },
-  { name: 'Afnan Turathi Blue EDP 100ml', url: 'https://dwatson.pk/afnan-turathi-blue-edp-100ml.html', price: 8700, display: 'Rs. 8,700', badge: 'Best Fresh/Daytime' },
-  { name: 'Acqua di Parma Colonia Intensa EDC 100ml', url: 'https://dwatson.pk/acqua-di-parma-colonia-intensa-edc-100ml.html', price: 19500, display: 'Rs. 19,500', badge: 'Best Luxury Office Scent' },
-  { name: 'Acqua di Parma Oud & Spice EDP 100ml', url: 'https://dwatson.pk/acqua-di-parma-oud-spice-edp-100ml.html', price: 53000, display: 'Rs. 53,000', badge: 'Ultra-Luxury Pick' },
-  { name: 'Ajmal Wisal Dhahab EDP 50ml', url: 'https://dwatson.pk/ajmal-wisal-dhahab-edp-50ml.html', price: 8500, display: 'Rs. 8,500' },
-  { name: 'Ajmal Cento EDP 100ml', url: 'https://dwatson.pk/ajmal-cento-edp-100ml-men.html', price: 4050, display: 'Rs. 4,050', badge: 'Best Under Rs. 5,000' },
-  { name: 'AB Collection Secret Red 100ml', url: 'https://dwatson.pk/ab-collection-secret-red-100ml.html', price: 3200, display: 'Rs. 3,200', badge: 'Best Budget' },
+  { name: 'Afnan 9PM EDP 100ml', url: 'https://dwatson.pk/afnan-9pm-edp-100ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/f/Afnan_9pm_edp_100ml.png', price: 8000, display: 'Rs. 8,000', badge: 'Best Overall' },
+  { name: 'Afnan 9PM Elixir Parfum Intense 100ml', url: 'https://dwatson.pk/afnan-9pm-elixir-parfum-intense-100ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/f/Afnan_9pm_elixir_parfum_intense_100ml.png', price: 12200, display: 'Rs. 12,200', badge: 'Strongest Projection' },
+  { name: 'Afnan Supremacy Not Only Intense Pour Homme EDP 100ml', url: 'https://dwatson.pk/afnan-supermacy-not-only-intense-pour-homme-edp-100ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/f/Afnan_supermacy_not_only_intense_pour_homme_edp_100ml.png', price: 10500, display: 'Rs. 10,500' },
+  { name: 'Afnan Supremacy In Oud EDP 100ml', url: 'https://dwatson.pk/afnan-supermacy-in-oud-edp-100ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/f/Afnan_supermacy_in_oud_edp_100ml.png', price: 11000, display: 'Rs. 11,000', badge: 'Best Oud' },
+  { name: 'Afnan Turathi Blue EDP 100ml', url: 'https://dwatson.pk/afnan-turathi-blue-edp-100ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/f/Afnan_turathi_blue_edp_100ml.jpeg', price: 8700, display: 'Rs. 8,700', badge: 'Best Fresh/Daytime' },
+  { name: 'Acqua di Parma Colonia Intensa EDC 100ml', url: 'https://dwatson.pk/acqua-di-parma-colonia-intensa-edc-100ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Acqua_Di_Parma_Colonia_Intensa_Edc_100ml.png', price: 19500, display: 'Rs. 19,500', badge: 'Best Luxury Office Scent' },
+  { name: 'Acqua di Parma Oud & Spice EDP 100ml', url: 'https://dwatson.pk/acqua-di-parma-oud-spice-edp-100ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Acqua_Di_Parma_Oud_Spice_Edp_100ml.jpeg', price: 53000, display: 'Rs. 53,000', badge: 'Ultra-Luxury Pick' },
+  { name: 'Ajmal Wisal Dhahab EDP 50ml', url: 'https://dwatson.pk/ajmal-wisal-dhahab-edp-50ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/j/Ajmal_wisal_dhahab_edp_50ml.jpeg', price: 8500, display: 'Rs. 8,500' },
+  { name: 'Ajmal Cento EDP 100ml', url: 'https://dwatson.pk/ajmal-cento-edp-100ml-men.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/j/Ajmal_Cento_Edp_100ml_Men.jpeg', price: 4050, display: 'Rs. 4,050', badge: 'Best Under Rs. 5,000' },
+  { name: 'AB Collection Secret Red 100ml', url: 'https://dwatson.pk/ab-collection-secret-red-100ml.html', image: 'https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/b/Ab_collection_secret_red_100ml.jpeg', price: 3200, display: 'Rs. 3,200', badge: 'Best Budget' },
 ];
 
 const faqs = [
@@ -61,7 +61,7 @@ const faqs = [
     </tbody>
   </table>
 
-  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} badge={products[0].badge}>
+  <ProductCard rank={1} name={products[0].name} price={products[0].display} url={products[0].url} image={products[0].image} badge={products[0].badge}>
     <p>
       The fragrance that made Arabian houses mainstream in Pakistan: a sweet, warm blend of
       amber, vanilla, and cinnamon that earns compliments the way scents four times its
@@ -70,7 +70,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} badge={products[1].badge}>
+  <ProductCard rank={2} name={products[1].name} price={products[1].display} url={products[1].url} image={products[1].image} badge={products[1].badge}>
     <p>
       The Elixir turns the original 9PM up: denser, boozier, and longer-lasting, built for
       cold evenings and events where you want to be noticed from across the room. If you
@@ -78,7 +78,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url}>
+  <ProductCard rank={3} name={products[2].name} price={products[2].display} url={products[2].url} image={products[2].image}>
     <p>
       Often compared to Parfums de Marly's Layton, this is a rich, spicy-sweet crowd-pleaser
       with an expensive-smelling drydown — the "special occasion" bottle in an affordable
@@ -86,7 +86,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} badge={products[3].badge}>
+  <ProductCard rank={4} name={products[3].name} price={products[3].display} url={products[3].url} image={products[3].image} badge={products[3].badge}>
     <p>
       The most approachable way into oud: Afnan smooths the sharp, medicinal edge many
       Western noses struggle with into a polished woody-amber that works at a mehndi or a
@@ -94,7 +94,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} badge={products[4].badge}>
+  <ProductCard rank={5} name={products[4].name} price={products[4].display} url={products[4].url} image={products[4].image} badge={products[4].badge}>
     <p>
       The daytime counterweight to all the sweetness above — a fresh, blue, aquatic-citrus
       profile made for Pakistani summers, office wear, and shalwar kameez Fridays. Inoffensive
@@ -102,7 +102,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} badge={products[5].badge}>
+  <ProductCard rank={6} name={products[5].name} price={products[5].display} url={products[5].url} image={products[5].image} badge={products[5].badge}>
     <p>
       Acqua di Parma's century-old Italian citrus, deepened with leather and woods. An EDC
       concentration that stays close to the skin — the choice for men who consider loud
@@ -110,7 +110,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} badge={products[6].badge}>
+  <ProductCard rank={7} name={products[6].name} price={products[6].display} url={products[6].url} image={products[6].image} badge={products[6].badge}>
     <p>
       For the collector: Italian refinement applied to eastern oud, resulting in one of the
       most elegant takes on the note money can buy in Pakistan. At Rs. 53,000 it's a
@@ -118,7 +118,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url}>
+  <ProductCard rank={8} name={products[7].name} price={products[7].display} url={products[7].url} image={products[7].image}>
     <p>
       "Wisal Dhahab" (golden union) is Ajmal doing what Ajmal has done since 1951: a proper
       oriental floral-woody built around traditional tastes, dense and long-lasting. The
@@ -126,7 +126,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} badge={products[8].badge}>
+  <ProductCard rank={9} name={products[8].name} price={products[8].display} url={products[8].url} image={products[8].image} badge={products[8].badge}>
     <p>
       A full 100ml EDP from a heritage house for Rs. 4,050 — Cento is a versatile,
       modern-smelling all-rounder that covers office, daily wear, and evenings acceptably
@@ -134,7 +134,7 @@ const faqs = [
     </p>
   </ProductCard>
 
-  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} badge={products[9].badge}>
+  <ProductCard rank={10} name={products[9].name} price={products[9].display} url={products[9].url} image={products[9].image} badge={products[9].badge}>
     <p>
       At Rs. 3,200, Secret Red is the entry point: a sweet-spicy profile in the popular
       evening style, good for students and daily wear without guarding the bottle. Pair it
