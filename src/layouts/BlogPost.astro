@@ -1,9 +1,11 @@
 ---
 import Base from './Base.astro';
 import RelatedProducts from '../components/RelatedProducts.astro';
+import InlineProduct from '../components/InlineProduct.astro';
 
 interface Faq { q: string; a: string; }
 interface Product { name: string; url: string; image: string; price: string; }
+type Block = { type: 'html'; html: string } | { type: 'product'; product: Product };
 interface Props {
   title: string;
   description: string;
@@ -28,6 +30,53 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 // Display prices are whole rupees ("Rs. 1,140") — strip everything non-digit,
 // including the dot in "Rs." and thousands commas.
 const priceToNumber = (s: string) => Number(String(s).replace(/[^0-9]/g, '')) || undefined;
+
+// Split the article body at <h2> section breaks and drop 1 (short posts) or 2
+// (long posts) "featured pick" cards mid-article, at the section boundaries
+// nearest the target fractions. Skips the intro and the FAQ/end region.
+function buildBlocks(html: string, products: Product[]): Block[] {
+  if (!products.length) return [{ type: 'html', html }];
+  const len = html.length;
+  const inWindow = (idx: number) => idx > len * 0.15 && idx < len * 0.8;
+  const wantN = len > 18000 ? 2 : 1;
+
+  // Prefer <h2> section breaks; fall back to <h3> for posts (e.g. specialist
+  // round-ups) whose mid-article breaks are all <h3>.
+  let heads = [...html.matchAll(/<h2[\s>]/g)].map((m) => m.index as number).filter(inWindow);
+  if (heads.length < wantN) {
+    heads = [...html.matchAll(/<h[23][\s>]/g)].map((m) => m.index as number).filter(inWindow);
+  }
+  if (!heads.length) return [{ type: 'html', html }];
+
+  const n = Math.min(wantN, products.length, heads.length);
+  const fractions = n === 1 ? [0.45] : [0.33, 0.66];
+
+  const cuts: number[] = [];
+  for (const f of fractions.slice(0, n)) {
+    const target = len * f;
+    let best: number | null = null;
+    let bestD = Infinity;
+    for (const idx of heads) {
+      if (cuts.includes(idx)) continue;
+      const d = Math.abs(idx - target);
+      if (d < bestD) { bestD = d; best = idx; }
+    }
+    if (best != null) cuts.push(best);
+  }
+  cuts.sort((a, b) => a - b);
+
+  const blocks: Block[] = [];
+  let prev = 0;
+  cuts.forEach((c, i) => {
+    blocks.push({ type: 'html', html: html.slice(prev, c) });
+    blocks.push({ type: 'product', product: products[i] });
+    prev = c;
+  });
+  blocks.push({ type: 'html', html: html.slice(prev) });
+  return blocks;
+}
+
+const blocks = buildBlocks(contentHtml, related);
 
 const schema = [
   {
@@ -112,7 +161,11 @@ const schema = [
       <img class="post-hero" src={banner} alt={bannerAlt} width="800" height="420" />
     )}
 
-    <div class="post-body" set:html={contentHtml} />
+    <div class="post-body">
+      {blocks.map((b) => (
+        b.type === 'html' ? <Fragment set:html={b.html} /> : <InlineProduct product={b.product} />
+      ))}
+    </div>
 
     <RelatedProducts heading={relatedHeading} category={relatedCategory} products={related} />
 
