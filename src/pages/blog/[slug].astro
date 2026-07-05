@@ -16,6 +16,9 @@ const { post } = Astro.props;
   bannerAlt={post.bannerAlt}
   contentHtml={post.contentHtml}
   faqs={post.faqs}
+  related={post.related ?? []}
+  relatedHeading={post.relatedHeading ?? ''}
+  relatedCategory={post.relatedCategory ?? ''}
   datePublished="2026-07-05"
   dateModified="2026-07-05"
 />

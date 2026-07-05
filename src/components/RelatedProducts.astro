@@ -1,0 +1,80 @@
+---
+interface Product {
+  name: string;
+  url: string;
+  image: string;
+  price: string;
+}
+interface Props {
+  heading: string;
+  category: string;
+  products: Product[];
+}
+const { heading, category, products } = Astro.props;
+---
+
+{products && products.length > 0 && (
+  <section class="related">
+    <h2 class="related-title">{heading}</h2>
+    <p class="related-sub">Handpicked from D.Watson — in stock with nationwide delivery.</p>
+    <div class="related-grid">
+      {products.map((p) => (
+        <a class="rp-card" href={p.url} rel="noopener">
+          <div class="rp-img"><img src={p.image} alt={p.name} loading="lazy" width="150" height="150" /></div>
+          <div class="rp-info">
+            <span class="rp-name">{p.name}</span>
+            <span class="rp-price">{p.price}</span>
+            <span class="rp-cta">View at dwatson.pk →</span>
+          </div>
+        </a>
+      ))}
+    </div>
+    <p class="related-more"><a href={category} rel="noopener">Browse the full range at dwatson.pk →</a></p>
+  </section>
+)}
+
+<style>
+  .related {
+    margin: 3rem 0 1rem;
+    padding: 1.5rem;
+    border: 1px solid var(--dw-border);
+    border-radius: 10px;
+    background: var(--dw-bg-soft);
+  }
+  .related-title { margin: 0; font-size: 1.35rem; color: var(--dw-text); }
+  .related-sub { margin: 0.35rem 0 1.25rem; font-size: 0.88rem; color: var(--dw-muted); }
+  .related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1rem;
+  }
+  .rp-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--dw-border);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--dw-text);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .rp-card:hover { box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); transform: translateY(-2px); }
+  .rp-img {
+    aspect-ratio: 1 / 1;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+  }
+  .rp-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .rp-info { display: flex; flex-direction: column; gap: 0.3rem; padding: 0.75rem 0.85rem 1rem; }
+  .rp-name { font-size: 0.85rem; font-weight: 600; line-height: 1.3; color: var(--dw-text); }
+  .rp-price { font-size: 0.95rem; font-weight: 700; color: var(--dw-red); }
+  .rp-cta { margin-top: 0.25rem; font-size: 0.78rem; font-weight: 700; color: var(--dw-blue); }
+  .rp-card:hover .rp-cta { text-decoration: underline; }
+  .related-more { margin: 1.25rem 0 0; }
+  .related-more a { font-weight: 700; font-size: 0.9rem; color: var(--dw-red); text-decoration: none; }
+  .related-more a:hover { text-decoration: underline; }
+</style>

@@ -1,7 +1,9 @@
 ---
 import Base from './Base.astro';
+import RelatedProducts from '../components/RelatedProducts.astro';
 
 interface Faq { q: string; a: string; }
+interface Product { name: string; url: string; image: string; price: string; }
 interface Props {
   title: string;
   description: string;
@@ -9,12 +11,23 @@ interface Props {
   bannerAlt: string;
   contentHtml: string;
   faqs: Faq[];
+  related?: Product[];
+  relatedHeading?: string;
+  relatedCategory?: string;
   datePublished: string;
   dateModified: string;
 }
 
-const { title, description, banner, bannerAlt, contentHtml, faqs, datePublished, dateModified } = Astro.props;
+const {
+  title, description, banner, bannerAlt, contentHtml, faqs,
+  related = [], relatedHeading = '', relatedCategory = '',
+  datePublished, dateModified,
+} = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
+
+// Display prices are whole rupees ("Rs. 1,140") — strip everything non-digit,
+// including the dot in "Rs." and thousands commas.
+const priceToNumber = (s: string) => Number(String(s).replace(/[^0-9]/g, '')) || undefined;
 
 const schema = [
   {
@@ -57,6 +70,30 @@ const schema = [
         })),
       }]
     : []),
+  ...(related.length
+    ? [{
+        '@context': 'https://schema.org',
+        '@type': 'ItemList',
+        name: relatedHeading,
+        numberOfItems: related.length,
+        itemListElement: related.map((p, i) => ({
+          '@type': 'ListItem',
+          position: i + 1,
+          item: {
+            '@type': 'Product',
+            name: p.name,
+            url: p.url,
+            image: p.image,
+            offers: {
+              '@type': 'Offer',
+              ...(priceToNumber(p.price) ? { price: priceToNumber(p.price), priceCurrency: 'PKR' } : {}),
+              availability: 'https://schema.org/InStock',
+              seller: { '@type': 'Organization', name: 'D.Watson', url: 'https://dwatson.pk/' },
+            },
+          },
+        })),
+      }]
+    : []),
 ];
 ---
 
@@ -76,6 +113,8 @@ const schema = [
     )}
 
     <div class="post-body" set:html={contentHtml} />
+
+    <RelatedProducts heading={relatedHeading} category={relatedCategory} products={related} />
 
     <p class="disclaimer">
       <strong>Disclaimer:</strong> This article is for general information only and is not a
