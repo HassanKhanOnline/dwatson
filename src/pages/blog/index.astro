@@ -1,0 +1,101 @@
+---
+import Base from '../../layouts/Base.astro';
+import posts from '../../data/posts.json';
+
+const cleanExcerpt = (s: string) =>
+  s
+    .replace(/^30[\s‑-]*Second[s]?\s*Summary[:\s]*/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    name: 'D.Watson Health Blog',
+    url: 'https://explore.dwatson.pk/blog/',
+    description:
+      'Health, wellness, and pharmacy guides from D.Watson Chemist, Pakistan.',
+    publisher: { '@type': 'Organization', name: 'D.Watson Chemist', url: 'https://dwatson.pk/' },
+    blogPost: posts.map((p) => ({
+      '@type': 'BlogPosting',
+      headline: p.title,
+      url: `https://explore.dwatson.pk/blog/${p.slug}/`,
+      ...(p.banner ? { image: p.banner } : {}),
+    })),
+  },
+];
+---
+
+<Base
+  title="D.Watson Health Blog — Wellness Guides, Symptoms & Advice in Pakistan | Explore"
+  description="Health and wellness guides from D.Watson Chemist: vitamin deficiencies, seasonal allergies, first-aid, skincare, and trusted specialist round-ups across Pakistan."
+  schema={schema}
+>
+  <section class="hero">
+    <div class="dw-container">
+      <h1>D.Watson Health Blog</h1>
+      <p>
+        Practical, easy-to-read health and wellness guides from the D.Watson pharmacy team —
+        symptoms to watch for, seasonal advice, and trusted specialist round-ups across
+        Pakistan.
+      </p>
+    </div>
+  </section>
+
+  <section class="dw-container">
+    <div class="blog-grid">
+      {posts.map((p) => (
+        <a class="blog-card" href={`/blog/${p.slug}/`}>
+          {p.banner && (
+            <div class="blog-card__image">
+              <img src={p.banner} alt={p.bannerAlt} loading="lazy" width="360" height="200" />
+            </div>
+          )}
+          <div class="blog-card__content">
+            <h2 class="blog-card__title">{p.title}</h2>
+            <p class="blog-card__excerpt">{cleanExcerpt(p.excerpt)}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, var(--dw-red), #7c0000);
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+  }
+  .hero h1 { font-size: 2.2rem; margin: 0 0 0.75rem; }
+  .hero p { max-width: 640px; margin: 0 auto; font-size: 1.05rem; opacity: 0.95; }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+  .blog-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--dw-border);
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--dw-text);
+    background: #fff;
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .blog-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  .blog-card__image { aspect-ratio: 16 / 9; overflow: hidden; background: var(--dw-bg-soft); }
+  .blog-card__image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .blog-card__content { padding: 1.1rem 1.25rem 1.4rem; }
+  .blog-card__title { font-size: 1.08rem; margin: 0 0 0.5rem; color: var(--dw-blue); line-height: 1.3; }
+  .blog-card__excerpt { font-size: 0.9rem; color: var(--dw-muted); margin: 0; }
+</style>

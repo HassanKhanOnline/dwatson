@@ -1,0 +1,21 @@
+---
+import BlogPost from '../../layouts/BlogPost.astro';
+import posts from '../../data/posts.json';
+
+export function getStaticPaths() {
+  return posts.map((p) => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+
+const { post } = Astro.props;
+---
+
+<BlogPost
+  title={post.title}
+  description={post.description}
+  banner={post.banner}
+  bannerAlt={post.bannerAlt}
+  contentHtml={post.contentHtml}
+  faqs={post.faqs}
+  datePublished="2026-07-05"
+  dateModified="2026-07-05"
+/>
