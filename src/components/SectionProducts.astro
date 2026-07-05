@@ -1,0 +1,82 @@
+---
+interface Product { name: string; url: string; image: string; price: string; }
+interface Props {
+  label: string;
+  category?: string;
+  products: Product[];
+}
+const { label, category, products } = Astro.props;
+---
+
+{products && products.length > 0 && (
+  <aside class="section-products">
+    <div class="sp-head">
+      <span class="sp-label">{label}</span>
+      {category && <a class="sp-all" href={category} rel="noopener">See all →</a>}
+    </div>
+    <div class="sp-grid">
+      {products.map((p) => (
+        <a class="sp-card" href={p.url} rel="noopener">
+          <div class="sp-img"><img src={p.image} alt={p.name} loading="lazy" width="120" height="120" /></div>
+          <span class="sp-name">{p.name}</span>
+          <span class="sp-price">{p.price}</span>
+        </a>
+      ))}
+    </div>
+  </aside>
+)}
+
+<style>
+  .section-products {
+    margin: 1.25rem 0 1.75rem;
+    padding: 1rem 1.1rem 1.15rem;
+    border: 1px solid var(--dw-border);
+    border-left: 4px solid var(--dw-red);
+    border-radius: 8px;
+    background: var(--dw-bg-soft);
+  }
+  .sp-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+  }
+  .sp-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--dw-red);
+  }
+  .sp-all { font-size: 0.8rem; font-weight: 700; color: var(--dw-blue); text-decoration: none; white-space: nowrap; }
+  .sp-all:hover { text-decoration: underline; }
+  .sp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 0.85rem;
+  }
+  .sp-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--dw-border);
+    border-radius: 6px;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--dw-text);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .sp-card:hover { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); transform: translateY(-2px); }
+  .sp-img {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    background: #fff;
+  }
+  .sp-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+  .sp-name { padding: 0 0.65rem; font-size: 0.8rem; font-weight: 600; line-height: 1.3; color: var(--dw-text); }
+  .sp-price { padding: 0.25rem 0.65rem 0.8rem; font-size: 0.88rem; font-weight: 700; color: var(--dw-red); }
+</style>

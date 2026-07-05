@@ -1081,6 +1081,158 @@
         "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/C/o/Cotton_400gm_roll_.png",
         "price": "Rs. 910"
       }
+    ],
+    "sections": [
+      {
+        "match": "Adhesive Bandages",
+        "label": "Shop bandages & dressings at D.Watson",
+        "category": "https://dwatson.pk/surgicals/surgical-supplies/dressings-bandages.html",
+        "products": [
+          {
+            "name": "Cotton 4inch Bandage Cotton Craft",
+            "url": "https://dwatson.pk/cotton-4inch-bandage-cotton-craft.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/C/o/Cotton_4inch_bandage_cotton_craft.png",
+            "price": "Rs. 900"
+          },
+          {
+            "name": "Comfeel Plus Coloplast Dressing 10cmx10cm",
+            "url": "https://dwatson.pk/comfeel-plus-coloplast-dressing-10cmx10cm.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/C/o/Comfeel_plus_coloplast_dressing_10cmx10cm.jpeg",
+            "price": "Rs. 1,025"
+          },
+          {
+            "name": "Activheal Alginate Dressing 10x20cm 5s",
+            "url": "https://dwatson.pk/activheal-alginate-dressing-10x20cm-5s.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/A/c/Activheal_Alginate_Dressing_10x20cm_5s.png",
+            "price": "Rs. 12,000"
+          }
+        ]
+      },
+      {
+        "match": "Sterile Gauze",
+        "label": "Shop gauze & cotton at D.Watson",
+        "category": "https://dwatson.pk/surgicals/surgical-supplies/dressings-bandages.html",
+        "products": [
+          {
+            "name": "Cotton 100gm Roll",
+            "url": "https://dwatson.pk/cotton-100gm-roll.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/C/o/Cotton_100gm_roll.jpeg",
+            "price": "Rs. 250"
+          },
+          {
+            "name": "Cotton 200gm Roll",
+            "url": "https://dwatson.pk/cotton-200gm-roll.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/C/o/Cotton_200gm_roll_.png",
+            "price": "Rs. 470"
+          },
+          {
+            "name": "Cotton 4inch Bandage Cotton Craft",
+            "url": "https://dwatson.pk/cotton-4inch-bandage-cotton-craft.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/C/o/Cotton_4inch_bandage_cotton_craft.png",
+            "price": "Rs. 900"
+          }
+        ]
+      },
+      {
+        "match": "Antiseptic",
+        "label": "Shop antiseptics at D.Watson",
+        "category": "https://dwatson.pk/medicines/infections-antibiotics/antiseptic.html",
+        "products": [
+          {
+            "name": "Boro Plus Antiseptic Cream 40ml",
+            "url": "https://dwatson.pk/boro-plus-antiseptic-cream-40ml.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/o/Boro_Plus_Antiseptic_Cream_40ml.png",
+            "price": "Rs. 90"
+          },
+          {
+            "name": "Boric Acid 250gm",
+            "url": "https://dwatson.pk/boric-acid-250gm.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/o/Boric_Acid_250gm.png",
+            "price": "Rs. 600"
+          },
+          {
+            "name": "Dettol Antiseptic Liquid 500ml Imported",
+            "url": "https://dwatson.pk/dettol-antiseptic-liquid-500ml-imported.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/D/e/Dettol_Antiseptic_Liquid_500ml_Imported.png",
+            "price": "Rs. 1,950"
+          }
+        ]
+      },
+      {
+        "match": "Digital Thermometer",
+        "label": "Shop thermometers at D.Watson",
+        "category": "https://dwatson.pk/medical-devices/monitoring-devices/thermometer.html",
+        "products": [
+          {
+            "name": "Lifecare lc990 digital thermometer flexible",
+            "url": "https://dwatson.pk/lifecare-lc990-digital-thermometer-flexible.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/L/i/Lifecare_lc990_digital_thermometer_flexible_1775631865.png",
+            "price": "Rs. 350"
+          },
+          {
+            "name": "Medico Instant Flexible Thermometer Ft 33",
+            "url": "https://dwatson.pk/medico-instant-flexible-thermometer-ft-33.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/M/e/Medico_instant_flexible_thermometer_ft_33_.png",
+            "price": "Rs. 600"
+          },
+          {
+            "name": "Believia Dt10 Digital Thermometer",
+            "url": "https://dwatson.pk/believia-dt10-digital-thermometer.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/B/e/Believia_Dt10_Digital_Thermometer.png",
+            "price": "Rs. 620"
+          }
+        ]
+      },
+      {
+        "match": "Disposable Gloves",
+        "label": "Shop gloves at D.Watson",
+        "category": "https://dwatson.pk/surgicals/surgical-supplies/ppe-surgical-wear/gloves.html",
+        "products": [
+          {
+            "name": "Polythene Gloves",
+            "url": "https://dwatson.pk/polythene-gloves.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/P/o/Polythene_Gloves_1769159103.jpeg",
+            "price": "Rs. 80"
+          },
+          {
+            "name": "Gloves Maxitex 7.5",
+            "url": "https://dwatson.pk/gloves-maxitex-7-5.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/G/l/Gloves_Maxitex_7_5.png",
+            "price": "Rs. 250"
+          },
+          {
+            "name": "Gloves Maxitex 8.0",
+            "url": "https://dwatson.pk/gloves-maxitex-8-0.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/G/l/Gloves_Maxitex_8_0.png",
+            "price": "Rs. 250"
+          }
+        ]
+      },
+      {
+        "match": "Burn Cream",
+        "label": "Shop burn & wound care at D.Watson",
+        "category": "https://dwatson.pk/medicines/skin-hair-nails/burn.html",
+        "products": [
+          {
+            "name": "Quench 15g Cream",
+            "url": "https://dwatson.pk/quench-15g-cream.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/Q/u/Quench_15g_Cream.jpeg",
+            "price": "Rs. 93"
+          },
+          {
+            "name": "Pyodine Gel 20g",
+            "url": "https://dwatson.pk/pyodine-gel-20g.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/P/y/Pyodine_Gel_20g.jpeg",
+            "price": "Rs. 205"
+          },
+          {
+            "name": "Polyfax 20gm Skin Oint",
+            "url": "https://dwatson.pk/polyfax-20gm-skin-oint.html",
+            "image": "https://dwatson.pk/media/catalog/product/cache/2765542505660baab28ecd555e27366e/P/o/Polyfax_20gm_Skin_Oint.jpeg",
+            "price": "Rs. 223"
+          }
+        ]
+      }
     ]
   },
   {

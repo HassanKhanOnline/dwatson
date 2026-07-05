@@ -2,10 +2,15 @@
 import Base from './Base.astro';
 import RelatedProducts from '../components/RelatedProducts.astro';
 import InlineProduct from '../components/InlineProduct.astro';
+import SectionProducts from '../components/SectionProducts.astro';
 
 interface Faq { q: string; a: string; }
 interface Product { name: string; url: string; image: string; price: string; }
-type Block = { type: 'html'; html: string } | { type: 'product'; product: Product };
+interface Section { match: string; label: string; category?: string; products: Product[]; }
+type Block =
+  | { type: 'html'; html: string }
+  | { type: 'product'; product: Product }
+  | { type: 'section'; section: Section };
 interface Props {
   title: string;
   description: string;
@@ -16,13 +21,14 @@ interface Props {
   related?: Product[];
   relatedHeading?: string;
   relatedCategory?: string;
+  sections?: Section[];
   datePublished: string;
   dateModified: string;
 }
 
 const {
   title, description, banner, bannerAlt, contentHtml, faqs,
-  related = [], relatedHeading = '', relatedCategory = '',
+  related = [], relatedHeading = '', relatedCategory = '', sections = [],
   datePublished, dateModified,
 } = Astro.props;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
@@ -76,7 +82,30 @@ function buildBlocks(html: string, products: Product[]): Block[] {
   return blocks;
 }
 
-const blocks = buildBlocks(contentHtml, related);
+// When a post has curated shoppable sections, inject a matching product row at
+// the end of each section (before the next heading), matched by heading text.
+function buildSectionBlocks(html: string, secs: Section[]): Block[] {
+  const heads = [...html.matchAll(/<(h2|h3)\b[^>]*>([\s\S]*?)<\/\1>/g)].map((m) => ({
+    index: m.index as number,
+    text: m[2].replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim(),
+  }));
+  if (!heads.length) return [{ type: 'html', html }];
+
+  const blocks: Block[] = [];
+  if (heads[0].index > 0) blocks.push({ type: 'html', html: html.slice(0, heads[0].index) });
+
+  heads.forEach((h, i) => {
+    const end = i + 1 < heads.length ? heads[i + 1].index : html.length;
+    blocks.push({ type: 'html', html: html.slice(h.index, end) });
+    const sec = secs.find((s) => h.text.toLowerCase().includes(s.match.toLowerCase()));
+    if (sec) blocks.push({ type: 'section', section: sec });
+  });
+  return blocks;
+}
+
+const blocks = sections.length
+  ? buildSectionBlocks(contentHtml, sections)
+  : buildBlocks(contentHtml, related);
 
 const schema = [
   {
@@ -143,6 +172,28 @@ const schema = [
         })),
       }]
     : []),
+  ...sections.map((sec) => ({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: sec.label,
+    numberOfItems: sec.products.length,
+    itemListElement: sec.products.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Product',
+        name: p.name,
+        url: p.url,
+        image: p.image,
+        offers: {
+          '@type': 'Offer',
+          ...(priceToNumber(p.price) ? { price: priceToNumber(p.price), priceCurrency: 'PKR' } : {}),
+          availability: 'https://schema.org/InStock',
+          seller: { '@type': 'Organization', name: 'D.Watson', url: 'https://dwatson.pk/' },
+        },
+      },
+    })),
+  })),
 ];
 ---
 
@@ -163,7 +214,9 @@ const schema = [
 
     <div class="post-body">
       {blocks.map((b) => (
-        b.type === 'html' ? <Fragment set:html={b.html} /> : <InlineProduct product={b.product} />
+        b.type === 'html' ? <Fragment set:html={b.html} />
+        : b.type === 'section' ? <SectionProducts label={b.section.label} category={b.section.category} products={b.section.products} />
+        : <InlineProduct product={b.product} />
       ))}
     </div>
 
